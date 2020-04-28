@@ -1,8 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Octus.Services;
-using Octus.Views;
+﻿using Xamarin.Forms;
 
 namespace Octus
 {
@@ -13,7 +9,6 @@ namespace Octus
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

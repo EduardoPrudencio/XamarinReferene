@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Octus.Views
@@ -7,11 +6,14 @@ namespace Octus.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Agendar : ContentPage
     {
+        ViewModels.Agendar agendar;
+
         public Agendar()
         {
             InitializeComponent();
 
-            BindingContext = new ViewModels.Agendar();
+            agendar = new ViewModels.Agendar();
+            BindingContext = agendar;
         }
     }
 }

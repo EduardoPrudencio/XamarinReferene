@@ -1,6 +1,8 @@
 ﻿using Octus.GetData;
+using Octus.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -11,10 +13,15 @@ namespace Octus.ViewModels
     {
         ScheduleManager scheduleManager;
 
+        bool _profissionalSelecionado = false;
         string _mesAnterior = string.Empty;
         string _mesCorrente = string.Empty;
         string _proximoMes = string.Empty;
         int _indexMonthSelected = 0;
+
+        Especializacao _especializacaoSelecionada = null;
+
+        ObservableCollection<Especializacao> _especializacoes;
 
         ICommand nextMonthCommand;
         ICommand previewMonthCommand;
@@ -23,11 +30,13 @@ namespace Octus.ViewModels
 
         public Agendar()
         {
+            _especializacoes = new ObservableCollection<Especializacao>();
             nextMonthCommand = new Command(OnNextMonth);
             previewMonthCommand = new Command(OnPreviewMonth);
 
             scheduleManager = new ScheduleManager();
             RefreshMonts();
+            PrepairEspecializations();
         }
 
         private void RefreshMonts(int month = 0)
@@ -39,6 +48,74 @@ namespace Octus.ViewModels
             this.MesAnterior = (months.Count == 3) ? months[0].MonthName : string.Empty;
             this.MesCorrente = months[1].MonthName;
             this.ProximoMes = (months[1].Index < months[2].Index) ? months[2].MonthName : string.Empty;
+        }
+
+        private void PrepairEspecializations()
+        {
+            _especializacoes.Add(new Especializacao("Especialização 1"));
+            _especializacoes.Add(new Especializacao("Especialização 2"));
+            _especializacoes.Add(new Especializacao("Especialização 3"));
+            _especializacoes.Add(new Especializacao("Especialização 4"));
+            _especializacoes.Add(new Especializacao("Especialização 5"));
+            _especializacoes.Add(new Especializacao("Especialização 6"));
+            _especializacoes.Add(new Especializacao("Especialização 7"));
+            _especializacoes.Add(new Especializacao("Especialização 8"));
+            _especializacoes.Add(new Especializacao("Especialização 9"));
+            _especializacoes.Add(new Especializacao("Especialização 10"));
+            _especializacoes.Add(new Especializacao("Especialização 11"));
+            _especializacoes.Add(new Especializacao("Especialização 12"));
+            _especializacoes.Add(new Especializacao("Especialização 13"));
+            _especializacoes.Add(new Especializacao("Especialização 14"));
+            _especializacoes.Add(new Especializacao("Especialização 15"));
+            _especializacoes.Add(new Especializacao("Especialização 16"));
+            _especializacoes.Add(new Especializacao("Especialização 17"));
+            _especializacoes.Add(new Especializacao("Especialização 18"));
+            _especializacoes.Add(new Especializacao("Especialização 19"));
+
+        }
+
+        public bool ProfissionalSelecionado
+        {
+            get { return _profissionalSelecionado; }
+            set
+            {
+                if (value != _profissionalSelecionado)
+                {
+                    _profissionalSelecionado = value;
+                    OnPropertyChanges("ProfissionalSelecionado");
+                }
+            }
+        }
+
+        public ObservableCollection<Especializacao> Especializacoes
+        {
+            get
+            {
+                return _especializacoes;
+            }
+            set
+            {
+                if (_especializacoes != value)
+                {
+                    _especializacoes = value;
+                    OnPropertyChanges("Especializacoes");
+                }
+            }
+        }
+
+        public Especializacao EspecializacaoSelecionada
+        {
+            get
+            {
+                return _especializacaoSelecionada;
+            }
+            set
+            {
+                if (_especializacaoSelecionada != value)
+                {
+                    _especializacaoSelecionada = value;
+                }
+            }
         }
 
         public string MesCorrente
@@ -150,6 +227,7 @@ namespace Octus.ViewModels
         public ICommand PreviewMonthCommand
         {
             get { return previewMonthCommand; }
+
         }
     }
 }
