@@ -33,21 +33,34 @@
 
     <!-- Your Pages -->
     <TabBar>
+        
 
         <Tab Title="Login" Icon="tab_feed.png">
             <ShellContent>
                 <local:Login Title="Login" />
             </ShellContent>
         </Tab>
-        <Tab Title="Agendar" Icon="schedule.png">
+        <Tab Title="Agendar" Icon="toSchedule.png">
             <ShellContent>
                 <local:Agendar Title="Agendar" />
             </ShellContent>
         </Tab>
 
-        <Tab Title="Notificações" Icon="messagebox.png">
+        <Tab Title="Agendamentos" Icon="schedule.png">
             <ShellContent>
-                <local:Notificacoes Title="Notificacoes" />
+                <local:Agendamentos Title="Agendamentos" />
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Notificações" Icon="notifications.png">
+            <ShellContent>
+                <local:Notificacoes Title="Notificações" />
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Usuário" Icon="user.png">
+            <ShellContent>
+                <local:User Title="Usuário" />
             </ShellContent>
         </Tab>
     </TabBar>
