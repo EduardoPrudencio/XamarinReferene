@@ -14,13 +14,13 @@ namespace Octus.ViewModels
         ScheduleManager scheduleManager;
 
         bool _profissionalSelecionado = false;
+        bool _especializacaoPendenteDeEscolha = true;
         string _mesAnterior = string.Empty;
         string _mesCorrente = string.Empty;
         string _proximoMes = string.Empty;
         int _indexMonthSelected = 0;
 
         Especializacao _especializacaoSelecionada = null;
-
         ObservableCollection<Especializacao> _especializacoes;
 
         ICommand nextMonthCommand;
@@ -38,6 +38,7 @@ namespace Octus.ViewModels
             RefreshMonts();
             PrepairEspecializations();
         }
+
 
         private void RefreshMonts(int month = 0)
         {
@@ -74,6 +75,7 @@ namespace Octus.ViewModels
 
         }
 
+
         public bool ProfissionalSelecionado
         {
             get { return _profissionalSelecionado; }
@@ -83,6 +85,7 @@ namespace Octus.ViewModels
                 {
                     _profissionalSelecionado = value;
                     OnPropertyChanges("ProfissionalSelecionado");
+                    OnPropertyChanges("EspecializacaoPendenteDeEscolha");
                 }
             }
         }
@@ -114,6 +117,23 @@ namespace Octus.ViewModels
                 if (_especializacaoSelecionada != value)
                 {
                     _especializacaoSelecionada = value;
+                    this.EspecializacaoPendenteDeEscolha = _especializacaoSelecionada == null;
+                }
+            }
+        }
+
+        public bool EspecializacaoPendenteDeEscolha
+        {
+            get
+            {
+                return _especializacaoPendenteDeEscolha;
+            }
+            set
+            {
+                if (_especializacaoPendenteDeEscolha != value)
+                {
+                    _especializacaoPendenteDeEscolha = value;
+                    OnPropertyChanges("EspecializacaoPendenteDeEscolha");
                 }
             }
         }
@@ -171,6 +191,7 @@ namespace Octus.ViewModels
                 OnPropertyChanges("DiasDoMes");
             }
         }
+
 
 
         void OnNextMonth(object s)
