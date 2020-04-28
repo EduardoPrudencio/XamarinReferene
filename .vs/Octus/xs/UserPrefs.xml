@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{FE93D0BE-9F75-4D0A-BECF-32AF08237185}|Default">
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1EF8C2E1-8E26-4E54-93E0-81D65BF90254" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/View/Agendamentos.xaml">
+    <Files>
+      <File FileName="Octus/AssemblyInfo.cs" Line="8" Column="72" />
+      <File FileName="Octus/View/Agendamentos.xaml" Line="149" Column="69" />
+      <File FileName="Octus/View/Login.xaml" />
+      <File FileName="Octus.iOS/Info.plist" />
+      <File FileName="Octus/App.xaml" Line="46" Column="53" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Octus" expanded="True">
+            <Node name="Octus" expanded="True">
+              <Node name="View" expanded="True">
+                <Node name="Agendamentos.xaml" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Octus.iOS" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="Fonts" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Octus.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

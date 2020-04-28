@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Octus.Views.Agendar">
+    <ContentPage.Content>
+        <Grid RowSpacing="0" BackgroundColor="{StaticResource BackgroundColoirDefault}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid 
+                Grid.Row="0" 
+                ColumnSpacing="0" 
+                Padding="10,0"
+               >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="35"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Botão de voltar-->
+                <Label Text="&#xf060;" Grid.Column="0" 
+                       Style="{StaticResource IconeDefault}"
+                       VerticalTextAlignment="Center"
+                       FontSize="30"
+                       FontFamily="FontAwesome5ProSolid"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PreviewMonthCommand}" />
+                    </Label.GestureRecognizers>
+
+                </Label>
+
+                <Label Grid.Column="1" 
+                       Text="{Binding MesAnterior}" 
+                       HorizontalTextAlignment="Start"
+                       Style="{StaticResource MesAgendamento}"
+                       />
+                <Label Grid.Column="2" 
+                       Text="{Binding MesCorrente}" 
+                       HorizontalTextAlignment ="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Style="{StaticResource MesAgendamento}"
+                       />
+                <Label Grid.Column="3" 
+                       Text="{Binding ProximoMes}"  
+                       HorizontalTextAlignment="End" 
+                       Style="{StaticResource MesAgendamento}"
+                       Margin="0,0,5,0"
+                       />
+
+                <!--Botão de próximo-->
+                <Label x:Name="lblAvanco" Text="&#xf061;"  Grid.Column="4" 
+                       Style="{StaticResource IconeDefault}"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="End"
+                       FontSize="30"
+                       FontFamily="FontAwesome5ProSolid"
+                       >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding NextMonthCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </Grid>
+
+            <StackLayout Grid.Row="1" Padding="10,0,0,0">
+
+                <!--DADOS DO PROFISSIONAL SELECIONADO-->
+                <Grid Margin="0,10,0,25" 
+                      ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Column="0">
+                        <Label Text="&#xf2bd;" FontSize="60" Padding="0,3,0,0" 
+                                Style="{StaticResource FontCabecalhoListView}"
+                               HorizontalOptions="Center"
+                               FontFamily="FontAwesome5ProSolid"
+                              />
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="1"  Padding="10,0,0,0" VerticalOptions="Center">
+                        <Label Text="Nome do profissional"  
+                               FontSize="21" 
+                               FontAttributes="Bold" 
+                               Style="{StaticResource FontCabecalhoListView}"
+                               />
+                        <Label Text="Especialidade" FontSize="18" Margin="0,-10,0,0" TextColor="#ba885d"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Style="{StaticResource FontCabecalhoListView}"
+                                           Text="Dia" 
+                                           Margin="10,-12,0,0"/>
+                    <Label Grid.Column="1" Style="{StaticResource FontCabecalhoListView}"
+                                           Text="Horário" 
+                                           VerticalOptions="Center" 
+                                           Margin="0,-12,0,0"/>
+                    <Label Grid.Column="2" Style="{StaticResource FontCabecalhoListView}"
+                                           Text="Dia da semana"
+                                           Grid.Row="0" 
+                                           Margin="0,-12,0,0"
+                                           />
+                </Grid>
+
+                <ListView ItemsSource="{Binding DiasDoMes}"
+                          BackgroundColor="{StaticResource BackgroundColoirDefault}"
+                          >
+                    <ListView.HeaderTemplate >
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="Dia" TextColor="White"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid >
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="160"/>
+                                        <ColumnDefinition Width="110"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"
+                                           Text="{Binding Day}" 
+                                           TextColor="White" 
+                                           FontSize="28" 
+                                           FontAttributes="Bold" 
+                                           HorizontalOptions="Center"
+                                           Margin="0,0,30,0"/>
+
+                                    <Label Grid.Column="1"
+                                           Text="{Binding Interval}" 
+                                           FontSize="18" 
+                                           HorizontalOptions="Center" 
+                                           TextColor="#cecece" 
+                                           VerticalOptions="Center" 
+                                           Margin="0,0,50,0"/>
+
+                                    <Label Grid.Column="2" 
+                                           Text="{Binding DayOsWeek}"
+                                           TextColor="White" 
+                                           FontSize="15" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           HorizontalTextAlignment="Center"
+                                           Margin="0,0,10,0"
+                                           />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

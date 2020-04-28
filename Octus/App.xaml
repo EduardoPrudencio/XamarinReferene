@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Octus.App">
+    <Application.Resources>
+        <Color x:Key="BackgroundColoirDefault">#383838</Color>
+        <Color x:Key="ColorTitleDefault">#eb8934</Color>
+        <Color x:Key="EntryBackgroundDefault">#7d7d7d</Color>
+        <Color x:Key="TextColorDefault">#ffffff</Color>
+        <Color x:Key="TextColorEnfase">#eb8934</Color>
+        <Color x:Key="BackgroundColorButtonDefault">#eb8934</Color>
+
+        <Style x:Key="LabelDestaque" TargetType="Label">
+            <Setter Property="FontFamily" Value="DidactGothic" />
+            <Setter Property="TextColor" Value="{StaticResource TextColorEnfase}" />
+        </Style>
+
+
+        <Style x:Key="LableTitle" TargetType="Label">
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="TextColor" Value="{StaticResource ColorTitleDefault}" />
+            <Setter Property="FontFamily" Value="DidactGothic" />
+        </Style>
+
+        <Style x:Key="FrameDefault" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{StaticResource EntryBackgroundDefault}" />
+            <Setter Property="CornerRadius" Value="{OnPlatform iOS=10,Android=30 }"/>
+            <Setter Property="HeightRequest" Value="38"/>
+            <Setter Property="Padding" Value="20,5,0,5"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="EntryDefault" TargetType="Entry">
+            <Setter Property="TextColor" Value="{StaticResource TextColorDefault}" />
+            <Setter Property="PlaceholderColor" Value="{StaticResource TextColorDefault}" />
+            <Setter Property="WidthRequest" Value="250" />
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontFamily" Value="DidactGothic" />
+        </Style>
+
+        <Style x:Key="IconeDefault" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource TextColorDefault}" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="VerticalOptions" Value ="Center" />
+        </Style>
+
+        <Style TargetType="Button" x:Key="ButtonDefault">
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="HeightRequest" Value="46"/>
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontFamily" Value="DidactGothic" />
+            <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorButtonDefault}" />
+            <Setter Property="TextColor" Value="{StaticResource TextColorDefault}" />
+        </Style>
+
+        <Style x:Key="LabelDefault" TargetType="Label">
+            <Setter Property="FontFamily" Value="DidactGothic" />
+        </Style>
+
+        <Style x:Key="Separator" TargetType="BoxView">
+            <Setter Property="HeightRequest" Value="1" />
+            <Setter Property="WidthRequest" Value="10" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="Color" Value="#ffffff" />
+            <Setter Property="Margin" Value="0,10,0,10" />
+            <Setter Property="Opacity" Value="0.5" />
+        </Style>
+
+        <Style x:Key="MesAgendamento" TargetType="Label">
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="TextColor" Value="#ffffff"/>
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="FontCabecalhoListView" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="{StaticResource ColorTitleDefault}" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+        </Style>
+
+
+    </Application.Resources>
+</Application>
