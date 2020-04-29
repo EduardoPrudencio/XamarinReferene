@@ -2,10 +2,10 @@
 {
     public class Especialista
     {
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
-        public string LinkImg { get; set; }
+        public string LinkImage { get; set; }
 
-        public Especializacao Especializacao { get; set; }
+        public Especializacao Specialization { get; set; }
     }
 }

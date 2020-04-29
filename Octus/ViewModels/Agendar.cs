@@ -23,7 +23,9 @@ namespace Octus.ViewModels
         int _indexMonthSelected = 0;
 
         Especializacao _especializacaoSelecionada = null;
+        Especialista _especialistaSelecionado = null;
         ObservableCollection<Especializacao> _especializacoes;
+        ObservableCollection<Especialista> _especialistas;
 
         ICommand nextMonthCommand;
         ICommand previewMonthCommand;
@@ -32,7 +34,6 @@ namespace Octus.ViewModels
 
         public Agendar()
         {
-            // _especializacoes = new ObservableCollection<Especializacao>();
             nextMonthCommand = new Command(OnNextMonth);
             previewMonthCommand = new Command(OnPreviewMonth);
 
@@ -59,6 +60,12 @@ namespace Octus.ViewModels
         {
             List<Especializacao> especializacoes = JsonConvert.DeserializeObject<List<Especializacao>>(_specializationManager.GetSpecializations());
             _especializacoes = new ObservableCollection<Especializacao>(especializacoes);
+        }
+
+        private void GetSpecialistsBySpecialization(Especializacao especialista)
+        {
+            List<Especialista> listChanged = JsonConvert.DeserializeObject<List<Especialista>>(_specializationManager.GetSpecialists(especialista.Name));
+            _especialistas = new ObservableCollection<Especialista>(listChanged);
         }
 
 
@@ -92,6 +99,22 @@ namespace Octus.ViewModels
             }
         }
 
+        public ObservableCollection<Especialista> Especialistas
+        {
+            get
+            {
+                return _especialistas;
+            }
+            set
+            {
+                if (_especialistas != value)
+                {
+                    _especialistas = value;
+                    OnPropertyChanges("Especialistas");
+                }
+            }
+        }
+
         public Especializacao EspecializacaoSelecionada
         {
             get
@@ -103,10 +126,28 @@ namespace Octus.ViewModels
                 if (_especializacaoSelecionada != value)
                 {
                     _especializacaoSelecionada = value;
-                    this.EspecializacaoPendenteDeEscolha = _especializacaoSelecionada == null;
+                    EspecializacaoPendenteDeEscolha = _especializacaoSelecionada == null;
+                    GetSpecialistsBySpecialization(_especializacaoSelecionada);
+                    OnPropertyChanges("Especialistas");
                 }
             }
         }
+
+        public Especialista EspecialistaSelecionado
+        {
+            get
+            {
+                return _especialistaSelecionado;
+            }
+            set
+            {
+                if (_especialistaSelecionado != value)
+                {
+                    _especialistaSelecionado = value;
+                }
+            }
+        }
+
 
         public bool EspecializacaoPendenteDeEscolha
         {

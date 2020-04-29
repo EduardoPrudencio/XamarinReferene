@@ -11,6 +11,7 @@ namespace Octus.GetData
         public SpecializationManager()
         {
             PrepareLitOsSpecializations();
+            PrepareLitOsSpecialists();
         }
 
         public string GetSpecializations()
@@ -21,7 +22,8 @@ namespace Octus.GetData
 
         public string GetSpecialists(string name)
         {
-            List<Specialist> _filteredList = _listOfSpecialists.Where(x => x.Name.Equals(name)).ToList();
+            List<Specialist> _filteredList = _listOfSpecialists.Where(x => x.Specialization.Name.Equals(name)).ToList();
+
             string serilizedList = Newtonsoft.Json.JsonConvert.SerializeObject(_filteredList);
             return serilizedList;
         }
@@ -42,7 +44,7 @@ namespace Octus.GetData
         {
             _listOfSpecialists = new List<Specialist>
             {
-                new Specialist("Dorote","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[0]),
+                new Specialist("Crotilde","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[0]),
                 new Specialist("Marta","https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547_960_720.png",_listyOfSpecializations[0]),
                 new Specialist("João","https://assets.pinshape.com/uploads/image/file/140673/linux-tux-high-five-desk-model-3d-printing-140673.png",_listyOfSpecializations[0]),
 
@@ -51,7 +53,7 @@ namespace Octus.GetData
 
                 new Specialist("Maria","https://assets.pinshape.com/uploads/image/file/140673/linux-tux-high-five-desk-model-3d-printing-140673.png",_listyOfSpecializations[2]),
 
-                new Specialist("Brnardo","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[3]),
+                new Specialist("Bernardo","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[3]),
                 new Specialist("Ângela","https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547_960_720.png",_listyOfSpecializations[3]),
 
                 new Specialist("Manuelle","https://assets.pinshape.com/uploads/image/file/140673/linux-tux-high-five-desk-model-3d-printing-140673.png",_listyOfSpecializations[4]),
