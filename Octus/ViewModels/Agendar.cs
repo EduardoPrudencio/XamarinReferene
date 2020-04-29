@@ -1,4 +1,5 @@
-﻿using Octus.GetData;
+﻿using Newtonsoft.Json;
+using Octus.GetData;
 using Octus.Models;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace Octus.ViewModels
     public class Agendar : ViewModelBase
     {
         ScheduleManager scheduleManager;
+        SpecializationManager _specializationManager;
 
         bool _profissionalSelecionado = false;
         bool _especializacaoPendenteDeEscolha = true;
@@ -30,11 +32,13 @@ namespace Octus.ViewModels
 
         public Agendar()
         {
-            _especializacoes = new ObservableCollection<Especializacao>();
+            // _especializacoes = new ObservableCollection<Especializacao>();
             nextMonthCommand = new Command(OnNextMonth);
             previewMonthCommand = new Command(OnPreviewMonth);
 
             scheduleManager = new ScheduleManager();
+            _specializationManager = new SpecializationManager();
+
             RefreshMonts();
             PrepairEspecializations();
         }
@@ -53,26 +57,8 @@ namespace Octus.ViewModels
 
         private void PrepairEspecializations()
         {
-            _especializacoes.Add(new Especializacao("Especialização 1"));
-            _especializacoes.Add(new Especializacao("Especialização 2"));
-            _especializacoes.Add(new Especializacao("Especialização 3"));
-            _especializacoes.Add(new Especializacao("Especialização 4"));
-            _especializacoes.Add(new Especializacao("Especialização 5"));
-            _especializacoes.Add(new Especializacao("Especialização 6"));
-            _especializacoes.Add(new Especializacao("Especialização 7"));
-            _especializacoes.Add(new Especializacao("Especialização 8"));
-            _especializacoes.Add(new Especializacao("Especialização 9"));
-            _especializacoes.Add(new Especializacao("Especialização 10"));
-            _especializacoes.Add(new Especializacao("Especialização 11"));
-            _especializacoes.Add(new Especializacao("Especialização 12"));
-            _especializacoes.Add(new Especializacao("Especialização 13"));
-            _especializacoes.Add(new Especializacao("Especialização 14"));
-            _especializacoes.Add(new Especializacao("Especialização 15"));
-            _especializacoes.Add(new Especializacao("Especialização 16"));
-            _especializacoes.Add(new Especializacao("Especialização 17"));
-            _especializacoes.Add(new Especializacao("Especialização 18"));
-            _especializacoes.Add(new Especializacao("Especialização 19"));
-
+            List<Especializacao> especializacoes = JsonConvert.DeserializeObject<List<Especializacao>>(_specializationManager.GetSpecializations());
+            _especializacoes = new ObservableCollection<Especializacao>(especializacoes);
         }
 
 
