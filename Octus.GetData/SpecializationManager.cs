@@ -44,20 +44,20 @@ namespace Octus.GetData
         {
             _listOfSpecialists = new List<Specialist>
             {
-                new Specialist("Crotilde","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[0]),
-                new Specialist("Marta","https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547_960_720.png",_listyOfSpecializations[0]),
-                new Specialist("João","https://assets.pinshape.com/uploads/image/file/140673/linux-tux-high-five-desk-model-3d-printing-140673.png",_listyOfSpecializations[0]),
+                new Specialist("Crotilde","https://s2.glbimg.com/HOos1Mu3tztptizOaf1ZuE4mMRM=/290x386/s.glbimg.com/jo/g1/f/original/2012/04/13/tereza-fotoruim_300_400.jpg",_listyOfSpecializations[0]),
+                new Specialist("Marta","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwo2sONbkrbKQKt20gzNjLDND2GYm86caS_w6Si4n68DdQYoNA&usqp=CAU",_listyOfSpecializations[0]),
+                new Specialist("João","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQbQw-M26y18LDQlEcEFIs6mFDOyRjih2UO_8ka5SZeAyVX8CI&usqp=CAU",_listyOfSpecializations[0]),
 
-                new Specialist("Alberto","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[1]),
-                new Specialist("Pedro","https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547_960_720.png",_listyOfSpecializations[1]),
+                new Specialist("Alberto","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSIyqkbzziRjqjESQmrhgmXQG4rIcCF2GmnRClkqUBC9LmKjgEs&usqp=CAU",_listyOfSpecializations[1]),
+                new Specialist("Pedro","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYqG8EzJysthqKA5keOvguEDLfnD0ZeZCIX0Roi33hzmUwDSO3&usqp=CAU",_listyOfSpecializations[1]),
 
-                new Specialist("Maria","https://assets.pinshape.com/uploads/image/file/140673/linux-tux-high-five-desk-model-3d-printing-140673.png",_listyOfSpecializations[2]),
+                new Specialist("Maria","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDgQvuIPpGDu3EbYWxSEPo0n3LKaVfgCdcUTuL9g26GOeCL49M&usqp=CAU",_listyOfSpecializations[2]),
 
-                new Specialist("Bernardo","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[3]),
-                new Specialist("Ângela","https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547_960_720.png",_listyOfSpecializations[3]),
+                new Specialist("Bernardo","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSTxutvishAXvfEKnsoCCnz5ihPBRXAHIn1H_KkxZBCmKNNpLQ3&usqp=CAU",_listyOfSpecializations[3]),
+                new Specialist("Ângela","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTubYgiQuIRhSGTQbvrKkn1ertaFeQ4G_DX7quyDOTuUL1yMsDz&usqp=CAU",_listyOfSpecializations[3]),
 
-                new Specialist("Manuelle","https://assets.pinshape.com/uploads/image/file/140673/linux-tux-high-five-desk-model-3d-printing-140673.png",_listyOfSpecializations[4]),
-                new Specialist("Eduardo","https://cdn.pixabay.com/photo/2012/05/07/15/07/penguin-48559_960_720.png",_listyOfSpecializations[4]),
+                new Specialist("Manuelle","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFEjOv64HAlBayR50o2ttjWmGI-pBDkTGTWJ14lpCJ4R5EruKx&usqp=CAU",_listyOfSpecializations[4]),
+                new Specialist("Eduardo","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSC3pU8x40DHnMIeiYR7lTsNP1c3dHy1dnLb8tAWo1Arn2lDW7V&usqp=CAU",_listyOfSpecializations[4]),
 
             };
         }

@@ -25,7 +25,8 @@ namespace Octus.ViewModels
                     if (LoginText.Trim().Equals("Admin") && Senha.Trim().Equals("123456"))
                     {
                         LoginOk();
-                        App.Current.MainPage.Navigation.PushAsync(new Views.Agendar());
+                        //App.Current.MainPage.Navigation.PushAsync(new Views.Agendar());
+                        App.Current.MainPage.Navigation.PushAsync(new Views.SelectSpecialization());
                         Shell.Current.CurrentItem.Items.RemoveAt(0);
                     }
                     else

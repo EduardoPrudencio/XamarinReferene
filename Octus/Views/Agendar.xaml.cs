@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Octus.Models;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Octus.Views
@@ -14,6 +15,17 @@ namespace Octus.Views
 
             agendar = new ViewModels.Agendar();
             BindingContext = agendar;
+
         }
+
+        public Agendar(Especialista especialista)
+        {
+            InitializeComponent();
+
+            agendar = new ViewModels.Agendar(especialista);
+            BindingContext = agendar;
+
+        }
+
     }
 }

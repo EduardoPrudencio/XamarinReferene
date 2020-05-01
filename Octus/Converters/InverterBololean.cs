@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace Octus.Converters
 {
-    public class SelectedSpecialistInvertToBollean : IValueConverter
+    public class InverterBololean : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

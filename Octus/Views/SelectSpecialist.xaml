@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Octus.Views.SelectSpecialist">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="0,0,0,0"
+                     IsVisible="{Binding EspecializacaoPendenteDeEscolha}">
+
+                <ListView ItemsSource="{Binding Especialistas}"
+                          BackgroundColor="{StaticResource BackgroundColoirDefault}"
+                          SelectedItem="{Binding EspecialistaSelecionado}"
+                          HasUnevenRows="True"
+                           >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" 
+                                             Padding="20,10"
+                                             >
+                                    <Frame IsClippedToBounds="True" Padding="0" CornerRadius="30">
+                                        <Image Source="{Binding LinkImage}" WidthRequest="50" HeightRequest="50" Margin="0,0,0,0"/>
+                                    </Frame>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Name}"
+                                               TextColor="#f35e20"
+                                               FontSize="20"
+                                               FontAttributes="Bold"
+                                               />
+                                        <Label Text="{Binding Specialization.Name}"
+                                               TextColor="#cecece" 
+                                               Margin="0,-10,0,0"
+                                               />
+                                    </StackLayout>
+                                </StackLayout>      
+
+                                <!--<StackLayout Orientation="Horizontal" BackgroundColor="Blue" Margin="0,0,0,2">
+                                    <Frame IsClippedToBounds="True" Padding="0" CornerRadius="60">
+                                        <Image Source="{Binding LinkImage}"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </Frame>
+                                    <StackLayout HeightRequest="80">
+                                    <Label Text="{Binding Name}" TextColor="White" FontSize="18" HorizontalTextAlignment="Center" Margin="0,2,0,0"/>
+                                    <Label Text="{Binding Specialization.Name}" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" Margin="40,-10,0,0"/>
+                                </StackLayout>
+                                </StackLayout>-->
+
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

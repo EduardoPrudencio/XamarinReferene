@@ -40,15 +40,16 @@
                 <local:Login Title="Login" />
             </ShellContent>
         </Tab>
-        <Tab Title="Agendar" Icon="toSchedule.png">
-            <ShellContent>
-                <local:Agendar Title="Agendar" />
-            </ShellContent>
-        </Tab>
 
         <Tab Title="Agendamentos" Icon="schedule.png">
             <ShellContent>
                 <local:Agendamentos Title="Agendamentos" />
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Agendar" Icon="toSchedule.png">
+            <ShellContent>
+                <local:Agendar Title="Agendar" />
             </ShellContent>
         </Tab>
 

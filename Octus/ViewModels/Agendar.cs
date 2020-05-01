@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -15,7 +16,6 @@ namespace Octus.ViewModels
         ScheduleManager scheduleManager;
         SpecializationManager _specializationManager;
 
-        bool _profissionalSelecionado = false;
         bool _especializacaoPendenteDeEscolha = true;
         string _mesAnterior = string.Empty;
         string _mesCorrente = string.Empty;
@@ -24,8 +24,8 @@ namespace Octus.ViewModels
 
         Especializacao _especializacaoSelecionada = null;
         Especialista _especialistaSelecionado = null;
+        DayToShow _diaSelecionado = null;
         ObservableCollection<Especializacao> _especializacoes;
-        ObservableCollection<Especialista> _especialistas;
 
         ICommand nextMonthCommand;
         ICommand previewMonthCommand;
@@ -44,6 +44,29 @@ namespace Octus.ViewModels
             PrepairEspecializations();
         }
 
+        public Agendar(Especialista especialista = null)
+        {
+            if (App.Current.MainPage != null && especialista == null)
+                App.Current.MainPage.Navigation.PushAsync(new Views.SelectSpecialization());
+
+            _especialistaSelecionado = especialista;
+
+            nextMonthCommand = new Command(OnNextMonth);
+            previewMonthCommand = new Command(OnPreviewMonth);
+
+            scheduleManager = new ScheduleManager();
+            _specializationManager = new SpecializationManager();
+
+            RefreshMonts();
+            PrepairEspecializations();
+
+            if (especialista != null)
+            {
+                _especializacaoPendenteDeEscolha = false;
+                OnPropertyChanges("EspecializacaoPendenteDeEscolha");
+            }
+        }
+
 
         private void RefreshMonts(int month = 0)
         {
@@ -51,7 +74,7 @@ namespace Octus.ViewModels
 
             months = scheduleManager.GetMonthTranslated(3, month - 1);
 
-            this.MesAnterior = (months.Count == 3) ? months[0].MonthName : string.Empty;
+            this.MesAnterior = (month == DateTime.Now.Month) ? string.Empty : ((months.Count == 3) ? months[0].MonthName : string.Empty);
             this.MesCorrente = months[1].MonthName;
             this.ProximoMes = (months[1].Index < months[2].Index) ? months[2].MonthName : string.Empty;
         }
@@ -62,25 +85,10 @@ namespace Octus.ViewModels
             _especializacoes = new ObservableCollection<Especializacao>(especializacoes);
         }
 
-        private void GetSpecialistsBySpecialization(Especializacao especialista)
+        private async Task<bool> ConfirmarAgendamento()
         {
-            List<Especialista> listChanged = JsonConvert.DeserializeObject<List<Especialista>>(_specializationManager.GetSpecialists(especialista.Name));
-            _especialistas = new ObservableCollection<Especialista>(listChanged);
-        }
-
-
-        public bool ProfissionalSelecionado
-        {
-            get { return _profissionalSelecionado; }
-            set
-            {
-                if (value != _profissionalSelecionado)
-                {
-                    _profissionalSelecionado = value;
-                    OnPropertyChanges("ProfissionalSelecionado");
-                    OnPropertyChanges("EspecializacaoPendenteDeEscolha");
-                }
-            }
+            bool answer = await App.Current.MainPage.DisplayAlert("Atenção", "Deseja confirmar esse ajendamento?", "Sim", "Não");
+            return answer;
         }
 
         public ObservableCollection<Especializacao> Especializacoes
@@ -99,22 +107,6 @@ namespace Octus.ViewModels
             }
         }
 
-        public ObservableCollection<Especialista> Especialistas
-        {
-            get
-            {
-                return _especialistas;
-            }
-            set
-            {
-                if (_especialistas != value)
-                {
-                    _especialistas = value;
-                    OnPropertyChanges("Especialistas");
-                }
-            }
-        }
-
         public Especializacao EspecializacaoSelecionada
         {
             get
@@ -125,10 +117,7 @@ namespace Octus.ViewModels
             {
                 if (_especializacaoSelecionada != value)
                 {
-                    _especializacaoSelecionada = value;
-                    EspecializacaoPendenteDeEscolha = _especializacaoSelecionada == null;
-                    GetSpecialistsBySpecialization(_especializacaoSelecionada);
-                    OnPropertyChanges("Especialistas");
+                    App.Current.MainPage.Navigation.PushAsync(new Views.SelectSpecialist(value));
                 }
             }
         }
@@ -147,6 +136,23 @@ namespace Octus.ViewModels
                 }
             }
         }
+
+        public DayToShow DiaSelecionado
+        {
+            get
+            {
+                return _diaSelecionado;
+            }
+            set
+            {
+                if (_diaSelecionado != value)
+                {
+                    _diaSelecionado = value;
+                    var t = ConfirmarAgendamento();
+                }
+            }
+        }
+
 
 
         public bool EspecializacaoPendenteDeEscolha
@@ -209,7 +215,11 @@ namespace Octus.ViewModels
             get
             {
                 _indexMonthSelected = (_indexMonthSelected == 0) ? DateTime.Now.Month : _indexMonthSelected;
-                return scheduleManager.GetDaysTranslated(DateTime.Now.Year, _indexMonthSelected);
+                List<DayToShow> listaSemDiasPassados = scheduleManager.GetDaysTranslated(DateTime.Now.Year, _indexMonthSelected);
+
+                listaSemDiasPassados = (_indexMonthSelected == DateTime.Now.Month) ? listaSemDiasPassados.Where(d => d.Day >= DateTime.Now.Day).ToList() : listaSemDiasPassados;
+
+                return listaSemDiasPassados;
             }
 
             set

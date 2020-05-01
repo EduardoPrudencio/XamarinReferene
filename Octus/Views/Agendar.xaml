@@ -10,7 +10,7 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converters:SelectedSpecialistInvertToBollean x:Key="SpecilizationSelectedToInvertBool" />
+            <converters:InverterBololean x:Key="InverterBoolean" />
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -29,7 +29,6 @@
                          IsVisible="{Binding EspecializacaoPendenteDeEscolha}">
                 <Label Text="Escolha a especialização" TextColor="White" FontSize="25"/>
             </StackLayout>
-            
 
             <StackLayout Grid.Row="1" Padding="0,10,0,0">
                 <ListView ItemsSource="{Binding Especializacoes}"
@@ -49,42 +48,12 @@
             </StackLayout>
             <!--ÁREA DE SEÇEÇÃO DE ESPECIALIDADE-->
 
-
-            <!--ÁREA DE SEÇEÇÃO DE ESPECIALISTA-->
-            <StackLayout Grid.Row="0" 
-                         VerticalOptions="Center" 
-                         HorizontalOptions="Center" 
-                         IsVisible="{Binding EspecializacaoPendenteDeEscolha, Converter={StaticResource SpecilizationSelectedToInvertBool}}">
-                <Label Text="Escolha o(a) especialista" TextColor="White" FontSize="20"/>
-            </StackLayout>
-
-
-            <StackLayout Grid.Row="1" 
-                         Padding="0,10,0,0"
-                         IsVisible="{Binding EspecializacaoPendenteDeEscolha, Converter={StaticResource SpecilizationSelectedToInvertBool}}">
-                         
-                <ListView ItemsSource="{Binding Especialistas}"
-                          BackgroundColor="{StaticResource BackgroundColoirDefault}"
-                          SelectedItem="{Binding EspecialistaSelecionado}"
-                          >
-                        
-
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding Name}" TextColor="White" FontSize="20" HorizontalTextAlignment="Center"/>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-            <!--ÁREA DE SEÇEÇÃO DE ESPECIALISTA-->
-
             <Grid 
                 Grid.Row="0" 
                 ColumnSpacing="0" 
                 Padding="10,0"
-                IsVisible="{Binding ProfissionalSelecionado}"
+                Margin="0,10,0,0"
+                IsVisible="{Binding EspecializacaoPendenteDeEscolha, Converter={StaticResource InverterBoolean}}"
                >
 
                 <Grid.ColumnDefinitions>
@@ -142,40 +111,46 @@
 
             </Grid>
 
-            <StackLayout Grid.Row="1" Padding="10,0,0,0" IsVisible="{Binding ProfissionalSelecionado}">
+            <StackLayout Grid.Row="1" 
+                         Padding="10,0,0,0" 
+                         IsVisible="{Binding EspecializacaoPendenteDeEscolha, Converter={StaticResource InverterBoolean}}"
+                         >
 
                 <!--DADOS DO PROFISSIONAL SELECIONADO-->
-                <Grid Margin="0,10,0,25" 
-                      ColumnSpacing="0">
+                
+                <Frame Padding="0" IsClippedToBounds="True" CornerRadius="10" WidthRequest="200" Margin="20,20,20,20" BorderColor="Orange">
+                    <Grid Padding="10" 
+                          ColumnSpacing="0"
+                          >
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="70" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="70" />
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                        </Grid.RowDefinitions>
 
-                    <StackLayout Grid.Column="0">
-                        <Label Text="&#xf2bd;" FontSize="60" Padding="0,3,0,0" 
-                                Style="{StaticResource FontCabecalhoListView}"
-                               HorizontalOptions="Center"
-                               FontFamily="FontAwesome5ProSolid"
-                              />
+                        <StackLayout Grid.Column="0" VerticalOptions="Center">
+                            <Frame IsClippedToBounds="True" Padding="0" CornerRadius="35" HeightRequest="70" WidthRequest="70">
+                                <Image Source="{Binding EspecialistaSelecionado.LinkImage}" Margin="0,0,0,0"/>
+                            </Frame>
 
-                    </StackLayout>
+                        </StackLayout>
 
-                    <StackLayout Grid.Column="1"  Padding="10,0,0,0" VerticalOptions="Center">
-                        <Label Text="Nome do profissional"  
-                               FontSize="21" 
-                               FontAttributes="Bold" 
-                               Style="{StaticResource FontCabecalhoListView}"
-                               />
-                        <Label Text="Especialidade" FontSize="18" Margin="0,-10,0,0" TextColor="#ba885d"/>
-                    </StackLayout>
-                </Grid>
-
+                        <StackLayout Grid.Column="1"  Padding="10,0,0,0" VerticalOptions="Center">
+                            <Label Text="{Binding EspecialistaSelecionado.Name}"  
+                                   FontSize="21" 
+                                   FontAttributes="Bold" 
+                                   Style="{StaticResource FontCabecalhoListView}"
+                                   />
+                            <Label Text="{Binding EspecialistaSelecionado.Specialization.Name}" FontSize="18" Margin="0,-10,0,0" TextColor="#ba885d"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <!--DADOS DO PROFISSIONAL SELECIONADO-->
+                
                 <Grid>
 
                     <Grid.ColumnDefinitions>
@@ -200,6 +175,7 @@
 
                 <ListView ItemsSource="{Binding DiasDoMes}"
                           BackgroundColor="{StaticResource BackgroundColoirDefault}"
+                          SelectedItem="{Binding DiaSelecionado}"
                           >
                     <ListView.HeaderTemplate >
                         <DataTemplate>
