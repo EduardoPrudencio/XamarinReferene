@@ -44,7 +44,7 @@ namespace Octus.ViewModels
             PrepairEspecializations();
         }
 
-        public Agendar(Especialista especialista = null)
+        public Agendar(Especialista especialista)
         {
             if (App.Current.MainPage != null && especialista == null)
                 App.Current.MainPage.Navigation.PushAsync(new Views.SelectSpecialization());
