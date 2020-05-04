@@ -1,42 +1,40 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.3c60f9cd2f2b3aff1a22f5543cd83440c282fccd" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/Views/SelectSpecialist.xaml">
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1EF8C2E1-8E26-4E54-93E0-81D65BF90254" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/Views/Agendar.xaml">
     <Files>
-      <File FileName="Octus.GetData/ScheduleManager.cs" Line="118" Column="1" />
-      <File FileName="Octus/Views/Agendar.xaml" Line="51" Column="50" />
-      <File FileName="Octus/Views/SelectSpecialist.xaml" Line="13" Column="50" />
-      <File FileName="Octus/Views/SelectSpecialist.xaml.cs" Line="19" Column="74" />
-      <File FileName="Octus/ViewModels/Agendar.cs" Line="44" Column="39" />
-      <File FileName="Octus/ViewModels/SelectSpecialist.cs" Line="68" Column="54" />
-      <File FileName="Octus/Views/Agendar.xaml.cs" Line="25" Column="1" />
-      <File FileName="Octus.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Octus/ViewModels/Agendar.cs" Line="229" Column="1" IsPinned="True" />
+      <File FileName="Octus/ViewModels/SelectSpecialist.cs" Line="28" Column="119" IsPinned="True" />
+      <File FileName="Octus.GetData/Specialist.cs" Line="33" Column="33" />
+      <File FileName="Octus.GetData/ScheduleManager.cs" Line="87" Column="32" />
+      <File FileName="Octus/Models/Especialista.cs" Line="14" Column="27" />
+      <File FileName="Octus/Views/SelectSpecialist.xaml.cs" Line="15" Column="1" />
+      <File FileName="Octus.GetData/SpecializationManager.cs" Line="29" Column="1" />
+      <File FileName="Octus.GetData/MonthWithDays.cs" Line="6" Column="18" />
+      <File FileName="Octus/Views/Agendar.xaml.cs" Line="17" Column="1" />
+      <File FileName="Octus/Views/Agendar.xaml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
             <Node name="Octus" expanded="True">
+              <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Agendar.xaml" expanded="True" />
-                <Node name="SelectSpecialist.xaml" expanded="True" selected="True" />
+                <Node name="Agendar.xaml" expanded="True" selected="True" />
               </Node>
             </Node>
             <Node name="Octus.GetData" expanded="True" />
-            <Node name="Octus.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Volumes/Grifo/Projetos/Xamarin/Octus/XamarinReferene/Octus/ViewModels/Agendar.cs" relfile="Octus/ViewModels/Agendar.cs" line="63" column="1" />
-      <Breakpoint file="/Volumes/Grifo/Projetos/Xamarin/Octus/XamarinReferene/Octus/ViewModels/SelectSpecialist.cs" relfile="Octus/ViewModels/SelectSpecialist.cs" line="64" column="1" />
-      <Breakpoint file="/Volumes/Grifo/Projetos/Xamarin/Octus/XamarinReferene/Octus/Views/Agendar.xaml.cs" relfile="Octus/Views/Agendar.xaml.cs" line="25" column="1" />
-      <Breakpoint file="/Volumes/Grifo/Projetos/Xamarin/Octus/XamarinReferene/Octus/ViewModels/Agendar.cs" relfile="Octus/ViewModels/Agendar.cs" line="49" column="1" />
+      <Breakpoint file="/Volumes/Grifo/Projetos/Xamarin/Octus/XamarinReferene/Octus/ViewModels/Agendar.cs" relfile="Octus/ViewModels/Agendar.cs" line="218" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

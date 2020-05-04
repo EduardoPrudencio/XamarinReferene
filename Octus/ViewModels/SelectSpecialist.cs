@@ -22,7 +22,11 @@ namespace Octus.ViewModels
 
         private void GetSpecialistsBySpecialization(Especializacao especialista)
         {
-            List<Especialista> listChanged = JsonConvert.DeserializeObject<List<Especialista>>(_specializationManager.GetSpecialists(especialista.Name));
+
+
+            List<Especialista> listChanged = JsonConvert.DeserializeObject<List<Especialista>>
+                                                           (_specializationManager.GetSpecialists(especialista.Name));
+
             _especialistas = new ObservableCollection<Especialista>(listChanged);
         }
 

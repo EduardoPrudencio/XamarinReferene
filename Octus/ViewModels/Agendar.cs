@@ -34,14 +34,7 @@ namespace Octus.ViewModels
 
         public Agendar()
         {
-            nextMonthCommand = new Command(OnNextMonth);
-            previewMonthCommand = new Command(OnPreviewMonth);
-
-            scheduleManager = new ScheduleManager();
-            _specializationManager = new SpecializationManager();
-
-            RefreshMonts();
-            PrepairEspecializations();
+            PrepararDados();
         }
 
         public Agendar(Especialista especialista)
@@ -51,14 +44,7 @@ namespace Octus.ViewModels
 
             _especialistaSelecionado = especialista;
 
-            nextMonthCommand = new Command(OnNextMonth);
-            previewMonthCommand = new Command(OnPreviewMonth);
-
-            scheduleManager = new ScheduleManager();
-            _specializationManager = new SpecializationManager();
-
-            RefreshMonts();
-            PrepairEspecializations();
+            PrepararDados();
 
             if (especialista != null)
             {
@@ -67,6 +53,18 @@ namespace Octus.ViewModels
             }
         }
 
+
+        private void PrepararDados()
+        {
+            nextMonthCommand = new Command(OnNextMonth);
+            previewMonthCommand = new Command(OnPreviewMonth);
+
+            scheduleManager = new ScheduleManager();
+            _specializationManager = new SpecializationManager();
+
+            RefreshMonts();
+            PrepairEspecializations();
+        }
 
         private void RefreshMonts(int month = 0)
         {
@@ -214,10 +212,25 @@ namespace Octus.ViewModels
         {
             get
             {
-                _indexMonthSelected = (_indexMonthSelected == 0) ? DateTime.Now.Month : _indexMonthSelected;
-                List<DayToShow> listaSemDiasPassados = scheduleManager.GetDaysTranslated(DateTime.Now.Year, _indexMonthSelected);
 
-                listaSemDiasPassados = (_indexMonthSelected == DateTime.Now.Month) ? listaSemDiasPassados.Where(d => d.Day >= DateTime.Now.Day).ToList() : listaSemDiasPassados;
+                if (_especialistaSelecionado == null) return new List<DayToShow>();
+
+                if(_especialistaSelecionado.Agenda.Max(x => x.Month) < _indexMonthSelected)
+                    return new List<DayToShow>();
+
+                _indexMonthSelected = (_indexMonthSelected == 0) ? DateTime.Now.Month : _indexMonthSelected;
+
+                
+                MonthWithDays monthWithDays = _especialistaSelecionado.Agenda
+                                              .FirstOrDefault(a => a.Month == _indexMonthSelected);
+
+                if (monthWithDays == null) return new List<DayToShow>();
+
+                List<DayToShow> listaSemDiasPassados = monthWithDays.Days;
+
+                listaSemDiasPassados = (_indexMonthSelected == DateTime.Now.Month)
+                                        ? listaSemDiasPassados.Where(d => d.Day >= DateTime.Now.Day).ToList()
+                                        : listaSemDiasPassados;
 
                 return listaSemDiasPassados;
             }

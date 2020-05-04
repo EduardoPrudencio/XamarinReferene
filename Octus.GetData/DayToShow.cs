@@ -21,7 +21,7 @@ namespace Octus.GetData
         public int InitialHour { get { return _intialHour; } }
         public int FinalHour { get { return _finalHour; } }
         public string Interval { get { return $"{_intialHour}:00 - {_finalHour}:00"; }}
-        public string DayOsWeek { get { return _daysOfWeek; } }
+        public string DayOfWeek { get { return _daysOfWeek; } }
         public bool Reserved { get { return _reserved; } set { _reserved = value; } }
 
         public int Day { get { return _day; } }
