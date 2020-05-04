@@ -2,29 +2,23 @@
   <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1EF8C2E1-8E26-4E54-93E0-81D65BF90254" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Octus/Views/Agendar.xaml">
     <Files>
-      <File FileName="Octus/ViewModels/Agendar.cs" Line="229" Column="1" IsPinned="True" />
-      <File FileName="Octus/ViewModels/SelectSpecialist.cs" Line="28" Column="119" IsPinned="True" />
-      <File FileName="Octus.GetData/Specialist.cs" Line="33" Column="33" />
-      <File FileName="Octus.GetData/ScheduleManager.cs" Line="87" Column="32" />
-      <File FileName="Octus/Models/Especialista.cs" Line="14" Column="27" />
-      <File FileName="Octus/Views/SelectSpecialist.xaml.cs" Line="15" Column="1" />
-      <File FileName="Octus.GetData/SpecializationManager.cs" Line="29" Column="1" />
-      <File FileName="Octus.GetData/MonthWithDays.cs" Line="6" Column="18" />
-      <File FileName="Octus/Views/Agendar.xaml.cs" Line="17" Column="1" />
-      <File FileName="Octus/Views/Agendar.xaml" Line="1" Column="1" />
+      <File FileName="Octus/Views/Agendar.xaml" Line="14" Column="71" />
+      <File FileName="Octus/Converters/InverterBololean.cs" Line="1" Column="1" />
+      <File FileName="Octus.iOS/Main.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
             <Node name="Octus" expanded="True">
+              <Node name="Converters" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Agendar.xaml" expanded="True" selected="True" />
+                <Node name="Agendar.xaml" selected="True" />
               </Node>
             </Node>
             <Node name="Octus.GetData" expanded="True" />
+            <Node name="Octus.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -33,9 +27,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Volumes/Grifo/Projetos/Xamarin/Octus/XamarinReferene/Octus/ViewModels/Agendar.cs" relfile="Octus/ViewModels/Agendar.cs" line="218" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

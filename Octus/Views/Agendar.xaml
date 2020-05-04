@@ -11,6 +11,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverterBololean x:Key="InverterBoolean" />
+            <converters:BolleanToRedOrWhite x:Key="BolleanToRedOrWhite" />
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -200,7 +201,7 @@
                     </ListView.HeaderTemplate>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
+                            <ViewCell IsEnabled="{Binding Reserved, Converter={StaticResource InverterBoolean}}">
                                 <Grid >
 
                                     <Grid.ColumnDefinitions>
@@ -211,23 +212,25 @@
 
                                     <Label Grid.Column="0"
                                            Text="{Binding Day}" 
-                                           TextColor="White" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToRedOrWhite}}" 
                                            FontSize="28" 
                                            FontAttributes="Bold" 
                                            HorizontalOptions="Center"
-                                           Margin="0,0,30,0"/>
+                                           Margin="0,0,30,0"
+                                           />
 
                                     <Label Grid.Column="1"
                                            Text="{Binding Interval}" 
                                            FontSize="18" 
                                            HorizontalOptions="Center" 
-                                           TextColor="#cecece" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToRedOrWhite}}" 
                                            VerticalOptions="Center" 
-                                           Margin="0,0,50,0"/>
+                                           Margin="0,0,50,0"
+                                           />
 
                                     <Label Grid.Column="2" 
                                            Text="{Binding DayOfWeek}"
-                                           TextColor="White" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToRedOrWhite}}" 
                                            FontSize="15" 
                                            Grid.Row="0" 
                                            VerticalOptions="Center"
