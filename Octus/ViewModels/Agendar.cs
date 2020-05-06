@@ -103,6 +103,9 @@ namespace Octus.ViewModels
                 mwd.OrderDays();
 
                 _diaSelecionado.Reserved = true;
+
+                MessagingCenter.Send<Agendar, DayToShow>(this, "NovoAgendamento", day);
+
                 OnPropertyChanges("DiasDoMes");
             }
 

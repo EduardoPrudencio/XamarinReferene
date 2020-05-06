@@ -1,23 +1,29 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.3c60f9cd2f2b3aff1a22f5543cd83440c282fccd" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Octus.GetData/MonthWithDays.cs">
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8DEB6B82-A27F-4871-85DA-F7C0753A6BB0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/Models/AgendamentoRealizados.cs">
     <Files>
-      <File FileName="Octus/Views/Agendar.xaml" Line="93" Column="36" />
-      <File FileName="Octus/ViewModels/Agendar.cs" Line="137" Column="1" />
-      <File FileName="Octus.GetData/MonthWithDays.cs" Line="12" Column="52" />
-      <File FileName="Octus.GetData/DayToShow.cs" Line="11" Column="32" />
+      <File FileName="Octus/Views/Agendar.xaml" Line="19" Column="88" />
+      <File FileName="Octus/ViewModels/Agenda.cs" Line="32" Column="10" />
+      <File FileName="Octus/Views/Agendamentos.xaml.cs" Line="19" Column="54" />
+      <File FileName="Octus/Views/Agendamentos.xaml" Line="33" Column="55" />
+      <File FileName="Octus/Models/AgendamentosRealizados.cs" Line="17" Column="104" />
+      <File FileName="Octus.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Octus.GetData/DayToShow.cs" Line="25" Column="86" />
+      <File FileName="Octus/Views/Login.xaml" Line="36" Column="1" />
+      <File FileName="Octus/AppShell.xaml" Line="1" Column="5" />
+      <File FileName="Octus/App.xaml" Line="1" Column="1" />
+      <File FileName="Octus/ViewModels/Agendar.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
             <Node name="Octus" expanded="True">
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="AgendamentoRealizados.cs" selected="True" />
+              </Node>
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />
-            </Node>
-            <Node name="Octus.GetData" expanded="True">
-              <Node name="MonthWithDays.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +31,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
