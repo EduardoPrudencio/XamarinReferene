@@ -10,7 +10,9 @@
             <StackLayout Padding="0,0,0,0"
                      IsVisible="{Binding EspecializacaoPendenteDeEscolha}">
 
-                <ListView ItemsSource="{Binding Especialistas}"
+                <ListView x:Name="ListSpecialist"
+                          ItemSelected="ListSpecialist_ItemSelected"
+                          ItemsSource="{Binding Especialistas}"
                           BackgroundColor="{StaticResource BackgroundColoirDefault}"
                           SelectedItem="{Binding EspecialistaSelecionado}"
                           HasUnevenRows="True"

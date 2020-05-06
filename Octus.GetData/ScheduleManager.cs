@@ -98,15 +98,16 @@ namespace Octus.GetData
 
                 if (podeInserir)
                 {
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "08:00-09:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "09:00-10:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "10:00-11:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "11:00-12:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "12:00-13:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "13:00-14:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "14:00-15:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "15:00-16:00"));
-                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], "16:00-17:00"));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 8,9));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 9,10));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 10,11));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 11,12));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 12,13));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 13,14));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 14,15));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 15,16));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 16,17));
+                    diasDoMes.Add(new DayToShow(i, diasDaDemanaEnglishPortuguese[d.DayOfWeek.ToString()], 17,18));
                 }
             }
 
