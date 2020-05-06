@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Octus.GetData
 {
@@ -12,6 +13,12 @@ namespace Octus.GetData
         {
             _month = month;
             _days = days;
+        }
+
+        public void OrderDays()
+        {
+            _days = _days.OrderBy(d => d.InitialHour)
+                         .OrderBy(d => d.Day).ToList();
         }
 
         public int Month { get { return _month; } }

@@ -86,6 +86,27 @@ namespace Octus.ViewModels
         private async Task<bool> ConfirmarAgendamento()
         {
             bool answer = await App.Current.MainPage.DisplayAlert("Atenção", "Deseja confirmar esse ajendamento?", "Sim", "Não");
+
+            if (answer)
+            {
+                MonthWithDays mwd = _especialistaSelecionado.Agenda
+                                    .FirstOrDefault(x => x.Month == _indexMonthSelected);
+
+                DayToShow day = mwd.Days.FirstOrDefault(d => d.InitialHour == _diaSelecionado.InitialHour);
+
+                mwd.Days.Remove(day);
+
+                day.Reserved = true;
+
+                mwd.Days.Add(day);
+
+                mwd.OrderDays();
+
+                _diaSelecionado.Reserved = true;
+                OnPropertyChanges("DiasDoMes");
+            }
+
+
             return answer;
         }
 
@@ -113,9 +134,10 @@ namespace Octus.ViewModels
             }
             set
             {
-                if (_especializacaoSelecionada != value)
+                 if (_especializacaoSelecionada != value)
                 {
                     App.Current.MainPage.Navigation.PushAsync(new Views.SelectSpecialist(value));
+                    OnPropertyChanges("Especializacoes");
                 }
             }
         }

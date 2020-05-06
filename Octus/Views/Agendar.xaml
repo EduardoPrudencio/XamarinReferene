@@ -22,7 +22,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-
+    
             <!--ÁREA DE SEÇEÇÃO DE ESPECIALIDADE-->
             <StackLayout Grid.Row="0" 
                          VerticalOptions="Center" 
@@ -90,7 +90,7 @@
                     <Label Grid.Column="2" 
                        Text="{Binding MesCorrente}" 
                        HorizontalTextAlignment ="Center"
-                       FontSize="18"
+                       FontSize="19"
                        FontAttributes="Bold"
                        Style="{StaticResource MesAgendamento}"
                        />
