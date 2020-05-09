@@ -1,28 +1,14 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8DEB6B82-A27F-4871-85DA-F7C0753A6BB0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/Models/AgendamentoRealizados.cs">
-    <Files>
-      <File FileName="Octus/Views/Agendar.xaml" Line="19" Column="88" />
-      <File FileName="Octus/ViewModels/Agenda.cs" Line="32" Column="10" />
-      <File FileName="Octus/Views/Agendamentos.xaml.cs" Line="19" Column="54" />
-      <File FileName="Octus/Views/Agendamentos.xaml" Line="33" Column="55" />
-      <File FileName="Octus/Models/AgendamentosRealizados.cs" Line="17" Column="104" />
-      <File FileName="Octus.iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="Octus.GetData/DayToShow.cs" Line="25" Column="86" />
-      <File FileName="Octus/Views/Login.xaml" Line="36" Column="1" />
-      <File FileName="Octus/AppShell.xaml" Line="1" Column="5" />
-      <File FileName="Octus/App.xaml" Line="1" Column="1" />
-      <File FileName="Octus/ViewModels/Agendar.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C0ADE00B-01EA-4360-A628-81D36413FBA4" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
             <Node name="Octus" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="AgendamentoRealizados.cs" selected="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Agendar.cs" selected="True" />
               </Node>
-              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />
             </Node>
           </Node>
