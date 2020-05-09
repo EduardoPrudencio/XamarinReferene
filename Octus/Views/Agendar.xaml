@@ -11,7 +11,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverterBololean x:Key="InverterBoolean" />
-            <converters:BolleanToRedOrWhite x:Key="BolleanToRedOrWhite" />
+            <converters:BolleanToTwoPossibleColors x:Key="BolleanToTwoPossibleColors" />
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -212,7 +212,7 @@
 
                                     <Label Grid.Column="0"
                                            Text="{Binding Day}" 
-                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToRedOrWhite}}" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
                                            FontSize="28" 
                                            FontAttributes="Bold" 
                                            HorizontalOptions="Center"
@@ -223,14 +223,14 @@
                                            Text="{Binding Interval}" 
                                            FontSize="18" 
                                            HorizontalOptions="Center" 
-                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToRedOrWhite}}" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
                                            VerticalOptions="Center" 
                                            Margin="0,0,50,0"
                                            />
 
                                     <Label Grid.Column="2" 
                                            Text="{Binding DayOfWeek}"
-                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToRedOrWhite}}" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
                                            FontSize="15" 
                                            Grid.Row="0" 
                                            VerticalOptions="Center"

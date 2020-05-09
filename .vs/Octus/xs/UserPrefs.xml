@@ -1,22 +1,15 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.3c60f9cd2f2b3aff1a22f5543cd83440c282fccd" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Octus.GetData/DayToShow.cs">
-    <Files>
-      <File FileName="Octus/ViewModels/Agendar.cs" Line="327" Column="1" />
-      <File FileName="Octus.GetData/DayToShow.cs" Line="30" Column="1" />
-      <File FileName="Octus/Views/Agendar.xaml" />
-    </Files>
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C0ADE00B-01EA-4360-A628-81D36413FBA4" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
             <Node name="Octus" expanded="True">
-              <Node name="Models" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Agendar.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True" />
-            </Node>
-            <Node name="Octus.GetData" expanded="True">
-              <Node name="DayToShow.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -24,7 +17,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

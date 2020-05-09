@@ -4,12 +4,12 @@ using Xamarin.Forms;
 
 namespace Octus.Converters
 {
-    public class BolleanToRedOrWhite : IValueConverter
+    public class BolleanToTwoPossibleColors : IValueConverter
     {
-        string corPositiva = "#a1edb5";
-        string corNegativa = "#f7665c";
+        string corPositiva = "#FFFFFF";
+        string corNegativa = "#757575";
 
-        public BolleanToRedOrWhite()
+        public BolleanToTwoPossibleColors()
         {
         }
 
