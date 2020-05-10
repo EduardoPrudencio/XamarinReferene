@@ -111,13 +111,22 @@
             </StackLayout>
 
             <!--AREA BOTOES-->
-            <StackLayout Grid.Row="2" >
-                <Button Text="Entrar" Style="{StaticResource ButtonDefault}" Command="{Binding LoginCommand }"/>
+            <StackLayout Grid.Row="2">
 
-                <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Margin="0,20,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Entrar" Style="{StaticResource ButtonDefault}" Command="{Binding LoginCommand }"/>
+                    <Button Text="Cadastrar" Style="{StaticResource SecondButton}" Command="{Binding LoginCommand }"/>
+                </StackLayout>
+
+                <FlexLayout Direction="Column"
+                            Margin="0,20,0,0"
+                            AlignItems="Center"
+                            JustifyContent="SpaceBetween"
+                            HorizontalOptions="FillAndExpand"
+                            >
                     <Label Style="{StaticResource LabelDefault}" Text="Esqueceu a senha?"  FontSize="15" TextColor="#ffffff"/>
                     <Label Text="Clique aqui"  FontSize="15" FontAttributes="Bold" Style="{StaticResource LabelDestaque}"/>
-                </StackLayout>
+                </FlexLayout>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

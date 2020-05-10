@@ -17,6 +17,21 @@ namespace Octus.Models
         }
 
 
+        public DayToShow Dia
+        {
+            get
+            {
+                return _day;
+            }
+            set
+            {
+                if (_day != value)
+                {
+                    _day = value;
+                }
+            }
+        }
+
         public string NomeEspecialista
         {
             get

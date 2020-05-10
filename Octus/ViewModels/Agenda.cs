@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Octus.GetData;
 using Octus.Models;
 using Xamarin.Forms;
@@ -37,6 +38,12 @@ namespace Octus.ViewModels
                 if (value != _agendamentoDoUsuario)
                 {
                     _agendamentoDoUsuario = value;
+
+                    _agendamentoDoUsuario = (ObservableCollection<AgendamentoRealizados>)
+                                            _agendamentoDoUsuario.OrderBy(x => x.NomeEspecialista)
+                                                                 .OrderBy(x => x.Dia.Day);    
+
+
                     OnPropertyChanges("Agendamentos");
                 }
             }
