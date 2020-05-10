@@ -68,6 +68,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderes\CustomEntryRender.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -132,7 +133,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Octus\Octus.csproj">
-      <Project>{2BE2B25C-11C1-4E76-AAC8-5A4384DD0B67}</Project>
+      <Project>{679AB52E-F29A-44A8-89EA-CAA584374BCE}</Project>
       <Name>Octus</Name>
     </ProjectReference>
   </ItemGroup>
@@ -159,5 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\user%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderes\" />
   </ItemGroup>
 </Project>

@@ -1,15 +1,23 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C0ADE00B-01EA-4360-A628-81D36413FBA4" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget." />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus.iOS/Renderes/CustomEntryRender.cs">
+    <Files>
+      <File FileName="Octus/Controls/CustomEntry.cs" Line="7" Column="6" />
+      <File FileName="Octus/Views/Login.xaml" />
+      <File FileName="Octus.Android/Renderes/CustomEntryRender.cs" Line="35" Column="54" />
+      <File FileName="Octus.iOS/Renderes/CustomEntryRender.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
-            <Node name="Octus" expanded="True">
-              <Node name="ViewModels" expanded="True">
-                <Node name="Agendar.cs" selected="True" />
+            <Node name="Octus.Android" expanded="True">
+              <Node name="Renderes" expanded="True" />
+            </Node>
+            <Node name="Octus.iOS" expanded="True">
+              <Node name="Renderes" expanded="True">
+                <Node name="CustomEntryRender.cs" selected="True" />
               </Node>
-              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>

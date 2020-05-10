@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:customRender ="clr-namespace:Octus.Controls"
              mc:Ignorable="d"
              x:Class="Octus.Views.Login">
     <ContentPage.Content>
@@ -33,7 +34,7 @@
                            FontFamily="FontAwesome5ProSolid"
                           />
 
-                        <Entry Placeholder="Login"
+                        <customRender:CustomEntry Placeholder="Login"
                                BackgroundColor="{StaticResource EntryBackgroundDefault}"
                            Style="{StaticResource EntryDefault}"
                        Text="{Binding LoginText}"
@@ -50,7 +51,7 @@
                            FontFamily="FontAwesome5ProSolid"
                           />
 
-                        <Entry Placeholder="Senha" 
+                        <customRender:CustomEntry Placeholder="Senha" 
                        Text="{Binding Senha}"
                        BackgroundColor="{StaticResource EntryBackgroundDefault}"
                        Style="{StaticResource EntryDefault}"
