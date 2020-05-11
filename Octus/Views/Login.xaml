@@ -115,7 +115,7 @@
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <Button Text="Entrar" Style="{StaticResource ButtonDefault}" Command="{Binding LoginCommand }"/>
-                    <Button Text="Cadastrar" Style="{StaticResource SecondButton}" Command="{Binding LoginCommand }"/>
+                    <Button Text="Cadastrar" Style="{StaticResource SecondButton}" />
                 </StackLayout>
 
                 <FlexLayout Direction="Column"

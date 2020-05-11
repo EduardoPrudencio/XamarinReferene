@@ -1,18 +1,22 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C0ADE00B-01EA-4360-A628-81D36413FBA4" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/obj/Debug/netstandard2.0/App.xaml.g.cs">
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8DEB6B82-A27F-4871-85DA-F7C0753A6BB0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/AssemblyInfo.cs">
     <Files>
       <File FileName="Octus/ViewModels/Agenda.cs" Line="44" Column="45" />
-      <File FileName="Octus/Views/Login.xaml" Line="115" Column="75" />
-      <File FileName="Octus/App.xaml" Line="61" Column="13" />
-      <File FileName="Octus/obj/Debug/netstandard2.0/App.xaml.g.cs" Line="22" Column="1" />
+      <File FileName="Octus/Views/Login.xaml" Line="98" Column="58" />
+      <File FileName="Octus/App.xaml" Line="53" Column="54" />
+      <File FileName="Octus/obj/Debug/netstandard2.0/App.xaml.g.cs" />
+      <File FileName="Octus/Views/User.xaml" Line="106" Column="38" />
+      <File FileName="Octus/Views/Agendar.xaml" />
+      <File FileName="Octus/AssemblyInfo.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
             <Node name="Octus" expanded="True">
-              <Node name="App.xaml" selected="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="AssemblyInfo.cs" selected="True" />
             </Node>
           </Node>
         </State>
