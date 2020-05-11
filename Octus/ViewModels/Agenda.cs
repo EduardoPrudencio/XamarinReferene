@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Octus.GetData;
+using Octus.Models;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Octus.GetData;
-using Octus.Models;
 using Xamarin.Forms;
 
 namespace Octus.ViewModels
@@ -24,7 +22,7 @@ namespace Octus.ViewModels
                 {
                     await App.Current.MainPage.DisplayAlert("Alerta!", $"Confirmando o gendamento para o dia " +
                         $"{sender.DiaSelecionado.Day} de {sender.MesCorrente} no intervalo " +
-                        $"{sender.DiaSelecionado.Interval} com { sender.EspecialistaSelecionado.Name}","Ok");
+                        $"{sender.DiaSelecionado.Interval} com { sender.EspecialistaSelecionado.Name}", "Ok");
 
                     _agendamentoDoUsuario.Add(new AgendamentoRealizados(sender.DiaSelecionado, sender.MesCorrente, sender.EspecialistaSelecionado));
                 });
@@ -41,7 +39,7 @@ namespace Octus.ViewModels
 
                     _agendamentoDoUsuario = (ObservableCollection<AgendamentoRealizados>)
                                             _agendamentoDoUsuario.OrderBy(x => x.NomeEspecialista)
-                                                                 .OrderBy(x => x.Dia.Day);    
+                                                                 .OrderBy(x => x.Dia.Day);
 
 
                     OnPropertyChanges("Agendamentos");
