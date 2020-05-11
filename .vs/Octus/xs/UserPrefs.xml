@@ -1,22 +1,23 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8DEB6B82-A27F-4871-85DA-F7C0753A6BB0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/AssemblyInfo.cs">
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.3c60f9cd2f2b3aff1a22f5543cd83440c282fccd" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/Views/User.xaml">
     <Files>
       <File FileName="Octus/ViewModels/Agenda.cs" Line="44" Column="45" />
       <File FileName="Octus/Views/Login.xaml" Line="98" Column="58" />
-      <File FileName="Octus/App.xaml" Line="53" Column="54" />
+      <File FileName="Octus/App.xaml" Line="53" Column="55" />
       <File FileName="Octus/obj/Debug/netstandard2.0/App.xaml.g.cs" />
-      <File FileName="Octus/Views/User.xaml" Line="106" Column="38" />
+      <File FileName="Octus/Views/User.xaml" Line="13" Column="43" />
       <File FileName="Octus/Views/Agendar.xaml" />
-      <File FileName="Octus/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Octus/AssemblyInfo.cs" Line="6" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Octus" expanded="True">
             <Node name="Octus" expanded="True">
-              <Node name="Views" expanded="True" />
-              <Node name="AssemblyInfo.cs" selected="True" />
+              <Node name="Views" expanded="True">
+                <Node name="User.xaml" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -25,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Octus.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
