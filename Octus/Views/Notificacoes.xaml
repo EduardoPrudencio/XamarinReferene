@@ -6,8 +6,9 @@
              mc:Ignorable="d"
              x:Class="Octus.Views.Notificacoes">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout BackgroundColor="{StaticResource BackgroundColoirDefault}">
+            <Label Text="Você não possui notificaões"
+                   TextColor="White"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

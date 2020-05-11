@@ -6,10 +6,126 @@
              mc:Ignorable="d"
              x:Class="Octus.Views.User">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="{StaticResource BackgroundColoirDefault}">
+
+            <StackLayout Padding="10"
+                         Orientation="Horizontal"
+                         HeightRequest="42"
+                         >
+                <Label Text="&#xf007;" 
+                        FontFamily="FontAwesome5ProSolid"
+                        TextColor="White"
+                        FontSize="40"
+                />
+                <StackLayout>
+                    <Label Text="Usuário"
+                           TextColor="White"
+                           FontSize="25"
+                    />
+                    <Label Text="Minha conta"
+                           TextColor="White"
+                           FontSize="15"
+                           Margin="0,-10,0,0"
+                    />
+                </StackLayout>
+
+                <StackLayout>
+
+                </StackLayout>
+                
+            </StackLayout>
+
+            <!--SAIR-->
+            <StackLayout Padding="10"
+                         Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         BackgroundColor="White"
+                         Margin="0,0,0,-5"
+                         HeightRequest="42"
+                         >
+                <Label   Text="&#xf011;" 
+                         FontFamily="FontAwesome5ProSolid"
+                         TextColor="#cecece"
+                         VerticalOptions="Center"
+                         FontSize="23"
+                         Margin="10,0,0,0"
+                />
+                <Label Text="Sair"
+                        TextColor="#cecece"
+                       VerticalOptions="Center"
+                        FontSize="18"
+                />
+                <Label Text="&#xf105;" 
+                        FontFamily="FontAwesome5ProSolid"
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        TextColor="#cecece"
+                        FontSize="23"
+                />
+            </StackLayout>
+
+            <!--ATENDIMENTOS REALIZADOS-->
+            <StackLayout Padding="10"
+                         Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         BackgroundColor="White"
+                         Margin="0,0,0,-5"
+                         HeightRequest="42"
+                         >
+                <Label   Text="&#xf073;" 
+                         FontFamily="FontAwesome5ProSolid"
+                         TextColor="#cecece"
+                         VerticalOptions="Center"
+                         FontSize="23"
+                         Margin="10,0,0,0"
+                />
+                <Label Text="Atendimentos realizados"
+                        TextColor="#cecece"
+                       VerticalOptions="Center"
+                        FontSize="18"
+                />
+                <Label Text="&#xf105;" 
+                        FontFamily="FontAwesome5ProSolid"
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        TextColor="#cecece"
+                        FontSize="23"
+                />
+            </StackLayout>
+
+
+            <!--CONTATOS-->
+            <StackLayout Padding="10"
+                         Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         BackgroundColor="White"
+                         Margin="0,0,0,-5"
+                         HeightRequest="42"
+                         >
+                <Label   Text="&#xf1fa;" 
+                         FontFamily="FontAwesome5ProSolid"
+                         TextColor="#cecece"
+                         VerticalOptions="Center"
+                         FontSize="23"
+                         Margin="10,0,0,0"
+                />
+                <Label Text="Contatos"
+                        TextColor="#cecece"
+                       VerticalOptions="Center"
+                        FontSize="18"
+                />
+                <Label Text="&#xf105;" 
+                        FontFamily="FontAwesome5ProSolid"
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        TextColor="#cecece"
+                        FontSize="23"
+                />
+            </StackLayout>
+
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

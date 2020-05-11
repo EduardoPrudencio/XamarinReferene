@@ -11,6 +11,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverterBololean x:Key="InverterBoolean" />
+            <converters:BolleanToTwoPossibleColors x:Key="BolleanToTwoPossibleColors" />
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -21,7 +22,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-
+    
             <!--ÁREA DE SEÇEÇÃO DE ESPECIALIDADE-->
             <StackLayout Grid.Row="0" 
                          VerticalOptions="Center" 
@@ -50,6 +51,7 @@
 
             <StackLayout BackgroundColor="#eb8934" 
                          Grid.Row="0"
+                         IsVisible="{Binding EspecializacaoPendenteDeEscolha, Converter={StaticResource InverterBoolean}}"
                          >
                 <Grid 
                 ColumnSpacing="0" 
@@ -88,7 +90,7 @@
                     <Label Grid.Column="2" 
                        Text="{Binding MesCorrente}" 
                        HorizontalTextAlignment ="Center"
-                       FontSize="18"
+                       FontSize="19"
                        FontAttributes="Bold"
                        Style="{StaticResource MesAgendamento}"
                        />
@@ -126,7 +128,12 @@
 
                 <!--DADOS DO PROFISSIONAL SELECIONADO-->
                 
-                <Frame Padding="0" IsClippedToBounds="True" CornerRadius="10" WidthRequest="200" Margin="20,20,20,20" BorderColor="Orange">
+                <Frame Padding="0"
+                       IsClippedToBounds="True"
+                       CornerRadius="10"
+                       WidthRequest="200"
+                       Margin="20,20,32,20"
+                       BorderColor="Orange">
                     <Grid Padding="10" 
                           ColumnSpacing="0"
                           >
@@ -194,7 +201,7 @@
                     </ListView.HeaderTemplate>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
+                            <ViewCell IsEnabled="{Binding Reserved, Converter={StaticResource InverterBoolean}}">
                                 <Grid >
 
                                     <Grid.ColumnDefinitions>
@@ -205,23 +212,25 @@
 
                                     <Label Grid.Column="0"
                                            Text="{Binding Day}" 
-                                           TextColor="White" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
                                            FontSize="28" 
                                            FontAttributes="Bold" 
                                            HorizontalOptions="Center"
-                                           Margin="0,0,30,0"/>
+                                           Margin="0,0,30,0"
+                                           />
 
                                     <Label Grid.Column="1"
                                            Text="{Binding Interval}" 
                                            FontSize="18" 
                                            HorizontalOptions="Center" 
-                                           TextColor="#cecece" 
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
                                            VerticalOptions="Center" 
-                                           Margin="0,0,50,0"/>
+                                           Margin="0,0,50,0"
+                                           />
 
                                     <Label Grid.Column="2" 
-                                           Text="{Binding DayOsWeek}"
-                                           TextColor="White" 
+                                           Text="{Binding DayOfWeek}"
+                                           TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
                                            FontSize="15" 
                                            Grid.Row="0" 
                                            VerticalOptions="Center"

@@ -15,6 +15,8 @@ namespace Octus.Views
         public Agendamentos()
         {
             InitializeComponent();
+
+            BindingContext = new ViewModels.Agenda();
         }
     }
 }

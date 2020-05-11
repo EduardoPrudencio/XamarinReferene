@@ -6,10 +6,70 @@
              mc:Ignorable="d"
              x:Class="Octus.Views.Agendamentos">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            
+            <ListView HasUnevenRows="True"
+                      ItemsSource="{Binding Agendamentos}"
+                      BackgroundColor="{StaticResource BackgroundColoirDefault}"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="Start"
+                                         Orientation="Horizontal"
+                                         HeightRequest="80"
+                                         >
+                                <StackLayout Orientation="Vertical"
+                                             HorizontalOptions="Start"
+                                             >
+                                     <BoxView BackgroundColor="White"
+                                         WidthRequest="1"
+                                         HeightRequest="18"
+                                              Margin="30,0,30,0"
+                                         VerticalOptions="FillAndExpand"
+                                    />
+
+                                     <Label Text="&#xf073;"
+                                            Margin="19,0,0,0"
+                                         Style="{StaticResource IconeDefault}"
+                                         FontFamily="FontAwesome5ProSolid"
+                                         FontSize="25"
+                                         />
+
+
+                                    <BoxView BackgroundColor="White"
+                                         WidthRequest="1"
+                                         HeightRequest="18"
+                                              Margin="30,0,30,0"
+                                         VerticalOptions="FillAndExpand"
+                                    />
+                                    
+                                </StackLayout>
+
+                               <StackLayout VerticalOptions="Center">
+                                    <Label Text="{Binding Agendamento}"
+                                           TextColor="White"
+                                           FontSize="16"
+                                           VerticalTextAlignment="Center"
+                                   />
+
+                                   <Label Text="{Binding NomeEspecialista}"
+                                           TextColor="White"
+                                           FontSize="16"
+                                           VerticalTextAlignment="Center"
+                                   />
+
+                                </StackLayout>
+                            </StackLayout>
+
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </Grid>
+            
     </ContentPage.Content>
 </ContentPage>
