@@ -1,15 +1,32 @@
-﻿<Properties StartupConfiguration="{F80AAAAE-961F-4E44-80B9-2D4BABCA8968}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1EF8C2E1-8E26-4E54-93E0-81D65BF90254" />
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E5447303-CCED-4BA3-B0E1-D3DE5A229AD4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/ViewModels/Agendar.cs">
+    <Files>
+      <File FileName="Octus/ViewModels/Agendar.cs" Line="83" Column="1" />
+      <File FileName="Octus/Models/Especializacao.cs" />
+      <File FileName="Octus.GetData/Specialization.cs" />
+      <File FileName="Octus.GetData/SpecializationManager.cs" />
+      <File FileName="Octus/Views/Agendar.xaml" />
+      <File FileName="Octus/Views/Agendamentos.xaml" />
+      <File FileName="Octus/Views/User.xaml" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Octus" expanded="True" selected="True">
+            <Node name="Octus" expanded="True">
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
         <State name="__root__">
           <Node name="Octus" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Octus.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
