@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E5447303-CCED-4BA3-B0E1-D3DE5A229AD4" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Octus/ViewModels/Agendar.cs">
     <Files>
-      <File FileName="Octus/ViewModels/Agendar.cs" Line="83" Column="1" />
+      <File FileName="Octus/ViewModels/Agendar.cs" Line="84" Column="1" />
       <File FileName="Octus/Models/Especializacao.cs" />
       <File FileName="Octus.GetData/Specialization.cs" />
       <File FileName="Octus.GetData/SpecializationManager.cs" />
