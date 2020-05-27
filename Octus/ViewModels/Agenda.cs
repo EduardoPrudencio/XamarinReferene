@@ -8,8 +8,6 @@ namespace Octus.ViewModels
 {
     public class Agenda : ViewModelBase
     {
-        private string _title = "Agendamentos";
-        private Especialista especialista;
         private ObservableCollection<AgendamentoRealizados> _agendamentoDoUsuario;
 
         public Agenda()
