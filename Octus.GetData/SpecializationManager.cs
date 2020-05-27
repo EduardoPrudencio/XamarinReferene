@@ -32,11 +32,11 @@ namespace Octus.GetData
         {
             _listyOfSpecializations = new List<Specialization>
             {
-                new Specialization("Especialização 1"),
-                new Specialization("Especialização 2"),
-                new Specialization("Especialização 3"),
-                new Specialization("Especialização 4"),
-                new Specialization("Especialização 5"),
+                new Specialization("Especialização 1", 0xf1ba),
+                new Specialization("Especialização 2", 0xf015),
+                new Specialization("Especialização 3", 0xf21a),
+                new Specialization("Especialização 4", 0xf2cd),
+                new Specialization("Especialização 5", 0xf140),
             };
         }
 
