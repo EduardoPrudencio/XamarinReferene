@@ -1,30 +1,32 @@
 ﻿<Properties StartupConfiguration="{5DD61A11-733F-4B63-926D-C901A2459E1E}|Default">
-  <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C0ADE00B-01EA-4360-A628-81D36413FBA4" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/Views/User.xaml">
+  <MonoDevelop.Ide.ItemProperties.Octus.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E5447303-CCED-4BA3-B0E1-D3DE5A229AD4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Octus/ViewModels/Agendar.cs">
     <Files>
-      <File FileName="Octus/ViewModels/Agenda.cs" Line="44" Column="45" />
-      <File FileName="Octus/Views/Login.xaml" />
-      <File FileName="Octus/App.xaml" />
-      <File FileName="Octus/obj/Debug/netstandard2.0/App.xaml.g.cs" />
-      <File FileName="Octus/Views/User.xaml" Line="13" Column="43" />
+      <File FileName="Octus/ViewModels/Agendar.cs" Line="83" Column="1" />
+      <File FileName="Octus/Models/Especializacao.cs" />
+      <File FileName="Octus.GetData/Specialization.cs" />
+      <File FileName="Octus.GetData/SpecializationManager.cs" />
       <File FileName="Octus/Views/Agendar.xaml" />
-      <File FileName="Octus/AssemblyInfo.cs" />
+      <File FileName="Octus/Views/Agendamentos.xaml" />
+      <File FileName="Octus/Views/User.xaml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Octus" expanded="True">
+          <Node name="Octus" expanded="True" selected="True">
             <Node name="Octus" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="User.xaml" selected="True" />
-              </Node>
+              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="Octus" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Octus.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
