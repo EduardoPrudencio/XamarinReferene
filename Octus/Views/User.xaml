@@ -14,16 +14,16 @@
                          >
                 <Label Text="&#xf007;" 
                         FontFamily="FontAwesome5ProSolid"
-                        TextColor="White"
+                        TextColor="#ed7c02"
                         FontSize="40"
                 />
                 <StackLayout>
                     <Label Text="Usuário"
-                           TextColor="White"
+                           TextColor="#ed7c02"
                            FontSize="25"
                     />
                     <Label Text="Minha conta"
-                           TextColor="White"
+                           TextColor="#ed7c02"
                            FontSize="15"
                            Margin="0,-10,0,0"
                     />
@@ -45,13 +45,13 @@
                          >
                 <Label   Text="&#xf011;" 
                          FontFamily="FontAwesome5ProSolid"
-                         TextColor="#cecece"
+                         TextColor="#ed7c02"
                          VerticalOptions="Center"
                          FontSize="23"
                          Margin="10,0,0,0"
                 />
-                <Label Text="Sair"
-                        TextColor="#cecece"
+                <Label Text="Desconectar"
+                        TextColor="#ed7c02"
                        VerticalOptions="Center"
                         FontSize="18"
                 />
@@ -59,7 +59,7 @@
                         FontFamily="FontAwesome5ProSolid"
                         VerticalOptions="Center"
                         HorizontalOptions="EndAndExpand"
-                        TextColor="#cecece"
+                        TextColor="#ed7c02"
                         FontSize="23"
                 />
             </StackLayout>
@@ -74,13 +74,13 @@
                          >
                 <Label   Text="&#xf073;" 
                          FontFamily="FontAwesome5ProSolid"
-                         TextColor="#cecece"
+                         TextColor="#ed7c02"
                          VerticalOptions="Center"
                          FontSize="23"
                          Margin="10,0,0,0"
                 />
                 <Label Text="Atendimentos realizados"
-                        TextColor="#cecece"
+                        TextColor="#ed7c02"
                        VerticalOptions="Center"
                         FontSize="18"
                 />
@@ -88,7 +88,7 @@
                         FontFamily="FontAwesome5ProSolid"
                         VerticalOptions="Center"
                         HorizontalOptions="EndAndExpand"
-                        TextColor="#cecece"
+                        TextColor="#ed7c02"
                         FontSize="23"
                 />
             </StackLayout>
@@ -104,13 +104,13 @@
                          >
                 <Label   Text="&#xf1fa;" 
                          FontFamily="FontAwesome5ProSolid"
-                         TextColor="#cecece"
+                         TextColor="#ed7c02"
                          VerticalOptions="Center"
                          FontSize="23"
                          Margin="10,0,0,0"
                 />
                 <Label Text="Contatos"
-                        TextColor="#cecece"
+                        TextColor="#ed7c02"
                        VerticalOptions="Center"
                         FontSize="18"
                 />
@@ -118,10 +118,70 @@
                         FontFamily="FontAwesome5ProSolid"
                         VerticalOptions="Center"
                         HorizontalOptions="EndAndExpand"
-                        TextColor="#cecece"
+                        TextColor="#ed7c02"
                         FontSize="23"
                 />
             </StackLayout>
+
+            <!--ALTERAR DADOS-->
+            <StackLayout Padding="10"
+                         Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         BackgroundColor="White"
+                         Margin="0,0,0,-5"
+                         HeightRequest="42"
+                         >
+                <Label   Text="&#xf15c;" 
+                         FontFamily="FontAwesome5ProSolid"
+                         TextColor="#ed7c02"
+                         VerticalOptions="Center"
+                         FontSize="23"
+                         Margin="10,0,0,0"
+                />
+                <Label Text="Alterar dados"
+                        TextColor="#ed7c02"
+                       VerticalOptions="Center"
+                        FontSize="18"
+                />
+                <Label Text="&#xf105;" 
+                        FontFamily="FontAwesome5ProSolid"
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        TextColor="#ed7c02"
+                        FontSize="23"
+                />
+            </StackLayout>
+
+            <!--ENDEREÇOS-->
+            <StackLayout Padding="10"
+                         Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         BackgroundColor="White"
+                         Margin="0,0,0,-5"
+                         HeightRequest="42"
+                         >
+                <Label   Text="&#xf015;" 
+                         FontFamily="FontAwesome5ProSolid"
+                         TextColor="#ed7c02"
+                         VerticalOptions="Center"
+                         FontSize="23"
+                         Margin="10,0,0,0"
+                />
+                <Label Text="Endereços"
+                        TextColor="#ed7c02"
+                       VerticalOptions="Center"
+                        FontSize="18"
+                />
+                <Label Text="&#xf105;" 
+                        FontFamily="FontAwesome5ProSolid"
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        TextColor="#ed7c02"
+                        FontSize="23"
+                />
+            </StackLayout>
+
+
 
 
 
