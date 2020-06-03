@@ -79,7 +79,8 @@ namespace Octus.ViewModels
 
         private void PrepairEspecializations()
         {
-            List<Especializacao> especializacoes = JsonConvert.DeserializeObject<List<Especializacao>>(_specializationManager.GetSpecializations());
+            string listJson = _specializationManager.GetSpecializations();
+            List<Especializacao> especializacoes = JsonConvert.DeserializeObject<List<Especializacao>>(listJson);
             _especializacoes = new ObservableCollection<Especializacao>(especializacoes);
         }
 
