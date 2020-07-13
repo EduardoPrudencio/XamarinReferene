@@ -13,21 +13,21 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition  Height="150"/>
+                <RowDefinition  Height="{OnIdiom Phone=150, Tablet=550}"/>
             </Grid.RowDefinitions>
 
             <!--AREA LOGO-->
             <StackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" >
                 <Label Text="Nome do app"  
                        Style="{StaticResource LableTitle}"/>
-                <Label Style="{StaticResource LabelDefault}" Text="Complemento" FontSize="29"  TextColor="#969899" Margin="30,-10,0,0" />
+                <Label Style="{StaticResource LabelDefault}" Text="Complemento" FontSize="29"  TextColor="#969899"  HorizontalOptions="Center" Margin="0,-15,0,0" />
             </StackLayout>
 
             <!--AREA LOGIN E SENHA-->
             <StackLayout Grid.Row="1">
 
 
-                <StackLayout WidthRequest="50" Margin="{OnIdiom Tablet=100,0, phone=0,0}">
+                <StackLayout WidthRequest="50" Margin="{OnIdiom Phone='0', Tablet='100,0'}">
 
                     <Frame Style="{StaticResource FrameDefault}">
 
@@ -75,7 +75,7 @@
                 <!--REDES SOCIAIS-->
 
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="{OnIdiom Phone='10,-15,0,0', Tablet='0,0,0,0'}">
 
                     <Label Style="{StaticResource LabelDefault}"
                            Text="&#xf08c;" 
@@ -120,9 +120,9 @@
             <!--AREA BOTOES-->
             <StackLayout Grid.Row="2">
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" WidthRequest="{OnIdiom Phone=270, Tablet=330}"> 
                     <Button Text="Entrar" Style="{StaticResource ButtonDefault}" Command="{Binding LoginCommand }"/>
-                    <Button Text="Cadastrar" Style="{StaticResource SecondButton}" />
+                    <Button Text="Cadastrar" Style="{StaticResource SecondButton}"  HorizontalOptions="EndAndExpand"/>
                 </StackLayout>
 
                 <FlexLayout Direction="Column"
@@ -131,8 +131,8 @@
                             JustifyContent="SpaceBetween"
                             HorizontalOptions="FillAndExpand"
                             >
-                    <Label Style="{StaticResource LabelDefault}" Text="Esqueceu a senha?"  FontSize="15" TextColor="#ffffff"/>
-                    <Label Text="Clique aqui"  FontSize="15" FontAttributes="Bold" Style="{StaticResource LabelDestaque}"/>
+                    <Label Style="{StaticResource LabelDefault}" Text="Esqueceu a senha?"  TextColor="#ffffff"/>
+                    <Label Text="Clique aqui" FontAttributes="Bold" Style="{StaticResource LabelDestaque}"/>
                 </FlexLayout>
             </StackLayout>
         </Grid>

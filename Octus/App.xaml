@@ -19,8 +19,8 @@
         </Style>
 
         <Style x:Key="LabelDestaque" TargetType="Label">
-            <Setter Property="FontFamily" Value="DidactGothic" />
             <Setter Property="TextColor" Value="{StaticResource TextColorEnfase}" />
+            <Setter Property="FontSize" Value="{OnIdiom Phone=15, Tablet=21}"/>
         </Style>
 
 
@@ -54,9 +54,9 @@
 
         <Style TargetType="Button" x:Key="ButtonDefault">
             <Setter Property="CornerRadius" Value="20"/>
-            <Setter Property="HeightRequest" Value="46"/>
-            <Setter Property="WidthRequest" Value="165" />
-            <Setter Property="FontSize" Value="16" />
+            <Setter Property="HeightRequest" Value="{OnIdiom Phone=40, Tablet=50}"/>
+            <Setter Property="WidthRequest" Value="{OnIdiom Phone=120, Tablet=160}" />
+            <Setter Property="FontSize" Value="{OnIdiom Phone=13, Tablet=18}}" />
             <Setter Property="FontFamily" Value="DidactGothic" />
             <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorButtonDefault}" />
             <Setter Property="TextColor" Value="{StaticResource TextColorDefault}" />
@@ -68,7 +68,7 @@
          </Style>
 
         <Style x:Key="LabelDefault" TargetType="Label">
-            <Setter Property="FontFamily" Value="DidactGothic" />
+            <Setter Property="FontSize" Value="{OnIdiom Phone=15, Tablet=21}" />
         </Style>
 
         <Style x:Key="Separator" TargetType="BoxView">

@@ -96,19 +96,20 @@
                     <Label Grid.Column="1" 
                        Text="{Binding MesAnterior}" 
                        HorizontalTextAlignment="Start"
+                       FontSize="{OnIdiom Tablet=19,Phone=15}"  
                        Style="{StaticResource MesAgendamento}"
                        />
                     <Label Grid.Column="2" 
                        Text="{Binding MesCorrente}" 
                        HorizontalTextAlignment ="Center"
-                       FontSize="19"
+                       FontSize="{OnIdiom Tablet=25,Phone=19}"  
                        FontAttributes="Bold"
                        Style="{StaticResource MesAgendamento}"
                        />
                     <Label Grid.Column="3" 
                        Text="{Binding ProximoMes}"  
                        HorizontalTextAlignment="End" 
-                       FontSize="15"
+                       FontSize="{OnIdiom Tablet=19,Phone=15}"  
                        Style="{StaticResource MesAgendamento}"
                        Margin="0,0,5,0"
                        />
@@ -134,6 +135,7 @@
             <StackLayout Grid.Row="1" 
                          Padding="10,0,0,0" 
                          Margin="0,-60,0,0"
+                         HorizontalOptions="Center"
                          IsVisible="{Binding EspecializacaoPendenteDeEscolha, Converter={StaticResource InverterBoolean}}"
                          >
 
@@ -174,33 +176,37 @@
 
                         <StackLayout Grid.Column="1"  Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="{Binding EspecialistaSelecionado.Name}"  
-                                   FontSize="21" 
+                                   FontSize="{OnIdiom Tablet=28,Phone=21}"  
                                    FontAttributes="Bold" 
                                    Style="{StaticResource FontCabecalhoListView}"
                                    />
-                            <Label Text="{Binding EspecialistaSelecionado.Specialization.Name}" FontSize="18" Margin="0,-10,0,0" TextColor="#ba885d"/>
+                            <Label Text="{Binding EspecialistaSelecionado.Specialization.Name}" FontSize="{OnIdiom Tablet=21,Phone=18}"  Margin="0,-10,0,0" TextColor="#ba885d"/>
                         </StackLayout>
                     </Grid>
                 </Frame>
                 <!--DADOS DO PROFISSIONAL SELECIONADO-->
                 
-                <Grid>
+                <Grid HorizontalOptions="Center">
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="125"/>
-                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="160"/>
+                        <ColumnDefinition Width="{OnIdiom Tablet=130, Phone=100}"/>
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Column="0" Style="{StaticResource FontCabecalhoListView}"
                                            Text="Dia" 
+                                           FontSize="{OnIdiom Tablet=21,Phone=15}"
                                            Margin="10,-12,0,0"/>
                     <Label Grid.Column="1" Style="{StaticResource FontCabecalhoListView}"
                                            Text="Horário" 
+                                           FontSize="{OnIdiom Tablet=21,Phone=15}"
                                            VerticalOptions="Center" 
-                                           Margin="0,-12,0,0"/>
+                                           Margin="25,-12,0,0"/>
                     <Label Grid.Column="2" Style="{StaticResource FontCabecalhoListView}"
                                            Text="Dia da semana"
+                                           HorizontalOptions="Center"
+                                           FontSize="{OnIdiom Tablet=21,Phone=15}"
                                            Grid.Row="0" 
                                            Margin="0,-12,0,0"
                                            />
@@ -220,26 +226,27 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell IsEnabled="{Binding Reserved, Converter={StaticResource InverterBoolean}}">
-                                <Grid >
+                                <Grid HorizontalOptions="Center">
 
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="160"/>
-                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="70"/>
+                                        <ColumnDefinition Width="{OnIdiom Tablet=160, Phone=150}"/>
+                                        <ColumnDefinition Width="{OnIdiom Tablet=130, Phone=110}"/>
                                     </Grid.ColumnDefinitions>
 
                                     <Label Grid.Column="0"
                                            Text="{Binding Day}" 
                                            TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
-                                           FontSize="28" 
+                                           FontSize="{OnIdiom Tablet=28,Phone=15}" 
                                            FontAttributes="Bold" 
                                            HorizontalOptions="Center"
+                                           VerticalOptions="Center"
                                            Margin="0,0,30,0"
                                            />
 
                                     <Label Grid.Column="1"
                                            Text="{Binding Interval}" 
-                                           FontSize="18" 
+                                           FontSize="{OnIdiom Tablet=21,Phone=15}" 
                                            HorizontalOptions="Center" 
                                            TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
                                            VerticalOptions="Center" 
@@ -249,7 +256,7 @@
                                     <Label Grid.Column="2" 
                                            Text="{Binding DayOfWeek}"
                                            TextColor="{Binding Reserved, Converter={StaticResource BolleanToTwoPossibleColors}}" 
-                                           FontSize="15" 
+                                           FontSize="{OnIdiom Tablet=21,Phone=15}" 
                                            Grid.Row="0" 
                                            VerticalOptions="Center"
                                            HorizontalTextAlignment="Center"

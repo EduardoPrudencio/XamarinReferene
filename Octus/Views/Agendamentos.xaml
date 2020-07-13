@@ -49,13 +49,13 @@
                                <StackLayout VerticalOptions="Center">
                                     <Label Text="{Binding Agendamento}"
                                            TextColor="White"
-                                           FontSize="16"
+                                           FontSize="{OnIdiom Tablet=22,Phone=15}"  
                                            VerticalTextAlignment="Center"
                                    />
 
                                    <Label Text="{Binding NomeEspecialista}"
                                            TextColor="White"
-                                           FontSize="16"
+                                          FontSize="{OnIdiom Tablet=22,Phone=16}"  
                                            VerticalTextAlignment="Center"
                                    />
 
