@@ -35,7 +35,8 @@
                 
             </StackLayout>
 
-            <!--SAIR-->
+            
+            <!--DESCONECTAR-->
             <StackLayout Padding="10"
                          Orientation="Horizontal"
                          VerticalOptions="Center"
@@ -63,6 +64,7 @@
                         FontSize="23"
                 />
             </StackLayout>
+
 
             <!--ATENDIMENTOS REALIZADOS-->
             <StackLayout Padding="10"

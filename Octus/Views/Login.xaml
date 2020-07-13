@@ -26,53 +26,60 @@
             <!--AREA LOGIN E SENHA-->
             <StackLayout Grid.Row="1">
 
-                <Frame Style="{StaticResource FrameDefault}">
 
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="&#xf007;" 
-                           Style="{StaticResource IconeDefault}"
-                           FontFamily="FontAwesome5ProSolid"
-                          />
+                <StackLayout WidthRequest="50" Margin="{OnIdiom Tablet=100,0, phone=0,0}">
 
-                        <customRender:CustomEntry Placeholder="Login"
-                               BackgroundColor="{StaticResource EntryBackgroundDefault}"
+                    <Frame Style="{StaticResource FrameDefault}">
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="&#xf007;" 
+                               Style="{StaticResource IconeDefault}"
+                               FontFamily="FontAwesome5ProSolid"
+                              />
+
+                            <customRender:CustomEntry Placeholder="Login"
+                                   BackgroundColor="{StaticResource EntryBackgroundDefault}"
+                               Style="{StaticResource EntryDefault}"
+                           Text="{Binding LoginText}"
+                           />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Style="{StaticResource FrameDefault}">
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label Text="&#xf084;"
+                                Style="{StaticResource IconeDefault}"
+                               FontFamily="FontAwesome5ProSolid"
+                              />
+
+                            <customRender:CustomEntry Placeholder="Senha" 
+                           Text="{Binding Senha}"
+                           BackgroundColor="{StaticResource EntryBackgroundDefault}"
                            Style="{StaticResource EntryDefault}"
-                       Text="{Binding LoginText}"
-                       />
+                           IsPassword="True"/>
+
+                        </StackLayout>
+                    </Frame>
+
+
+                    <StackLayout Orientation="Horizontal"  Margin="0,10,0,0">
+                        <BoxView Style="{StaticResource Separator}"/>
+                        <Label Text="Ou" TextColor="#FFFFFF" FontSize="{OnIdiom Phone=16, Tablet=25}" />
+                        <BoxView Style="{StaticResource Separator}"/>
                     </StackLayout>
-                </Frame>
 
-                <Frame Style="{StaticResource FrameDefault}">
-
-                    <StackLayout Orientation="Horizontal">
-
-                        <Label Text="&#xf084;"
-                            Style="{StaticResource IconeDefault}"
-                           FontFamily="FontAwesome5ProSolid"
-                          />
-
-                        <customRender:CustomEntry Placeholder="Senha" 
-                       Text="{Binding Senha}"
-                       BackgroundColor="{StaticResource EntryBackgroundDefault}"
-                       Style="{StaticResource EntryDefault}"
-                       IsPassword="True"/>
-
-                    </StackLayout>
-                </Frame>
+                </StackLayout>
 
                 <!--REDES SOCIAIS-->
 
-                <StackLayout Orientation="Horizontal"  Margin="0,10,0,0">
-                    <BoxView Style="{StaticResource Separator}"/>
-                    <Label Text="Ou" TextColor="#FFFFFF"/>
-                    <BoxView Style="{StaticResource Separator}"/>
-                </StackLayout>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
 
                     <Label Style="{StaticResource LabelDefault}"
                            Text="&#xf08c;" 
-                           FontSize="16" 
+                           FontSize="{OnIdiom Phone=16, Tablet=30}" 
                            TextColor="#ffffff"
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center"
@@ -81,7 +88,7 @@
 
 
                     <Label Text="Use o Linkedin" 
-                           FontSize="16" 
+                           FontSize="{OnIdiom Phone=16, Tablet=20}" 
                            TextColor="#ffffff"
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center"
@@ -92,7 +99,7 @@
 
                     <Label Text="&#xf09a;" 
                            TextColor="#ffffff"
-                           FontSize="16" 
+                           FontSize="{OnIdiom Phone=16, Tablet=30}" 
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center"
                             FontFamily="FontAwesomeBrands"
@@ -100,7 +107,7 @@
 
                     <Label Style="{StaticResource LabelDefault}"
                            Text="Use o Facebook" 
-                           FontSize="16" 
+                           FontSize="{OnIdiom Phone=16, Tablet=20}" 
                            TextColor="#ffffff"
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center"

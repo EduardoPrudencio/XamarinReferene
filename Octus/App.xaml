@@ -13,6 +13,11 @@
         <Color x:Key="TextColorEnfase">#eb8934</Color>
         <Color x:Key="BackgroundColorButtonDefault">#eb8934</Color>
 
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="DidactGothic" />
+        </Style>
+
         <Style x:Key="LabelDestaque" TargetType="Label">
             <Setter Property="FontFamily" Value="DidactGothic" />
             <Setter Property="TextColor" Value="{StaticResource TextColorEnfase}" />
@@ -28,7 +33,7 @@
         <Style x:Key="FrameDefault" TargetType="Frame">
             <Setter Property="BackgroundColor" Value="{StaticResource EntryBackgroundDefault}" />
             <Setter Property="CornerRadius" Value="{OnPlatform iOS=10,Android=30 }"/>
-            <Setter Property="HeightRequest" Value="38"/>
+            <Setter Property="HeightRequest" Value="{OnIdiom Phone=38, Tablet=50}"/>
             <Setter Property="Padding" Value="20,5,0,5"/>
             <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
@@ -68,6 +73,7 @@
 
         <Style x:Key="Separator" TargetType="BoxView">
             <Setter Property="HeightRequest" Value="1" />
+            <Setter Property="VerticalOptions" Value="Center" />
             <Setter Property="WidthRequest" Value="10" />
             <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             <Setter Property="Color" Value="#ffffff" />
